@@ -2,9 +2,11 @@
 {
     internal class Program
     {
-        static void Main()
-        {
-            Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        { 
+            //A12_objemValce.Mainx();
+            A13_trojuhelnik.Mainx();
         }
     }
 }
+
