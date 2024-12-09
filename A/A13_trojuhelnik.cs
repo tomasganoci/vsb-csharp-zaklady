@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace A {
-    internal class A13_trojuhelnik {
+    internal class a13_trojuhelnik {
         public static void Mainx() {
             Console.WriteLine("A13_trojuhelnik");
         }
