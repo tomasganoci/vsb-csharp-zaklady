@@ -15,6 +15,7 @@ namespace A {
             int pocetSudu;
             float mnozstviLitru;
 
+            Console.WriteLine("Zadejte počet sudů a množství litrů v sudu (ve všech je stejně). Kolik litrů je celkem? (příliš lehké)");
             Console.WriteLine("Kolik chcete sudů?");
             pocetSudu = int.Parse(Console.ReadLine());
             Console.WriteLine("Kolika litry vody, chceš naplnit sudy?");

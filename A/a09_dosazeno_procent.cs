@@ -15,6 +15,7 @@ namespace A {
 
             double ocekavanyPrijem, skutecnyPrijem;
 
+            Console.WriteLine("Z klávesnice se zadá očekávaný a skutečný příjem. Počítač oznámí, kolika procent bylo dosaženo.");
             Console.WriteLine("Zadejte, jaký očekáváte finanční příjem.");
             ocekavanyPrijem = double.Parse(Console.ReadLine());
             Console.WriteLine("Zadejte, jaký je Váš skutečný finanční příjem.", "Skutečný finanční příjem");
