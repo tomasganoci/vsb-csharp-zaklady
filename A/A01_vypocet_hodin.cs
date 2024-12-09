@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualBasic.FileIO;
 
 namespace A {
-    internal class A01_vypocet_hodin {
+    internal class a01_vypocet_hodin {
         public static void Mainx() {
 
             //a1) Zadejte počet dnů a hodin. Program vypočte, kolik je to hodin (výsledek může být reálné číslo)   
