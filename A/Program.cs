@@ -18,8 +18,12 @@
             //a07_litry_v_sudech.Mainx_reseni();
             //a08_druha_mocnina.Mainx();
             //a08_druha_mocnina.Mainx_reseni();
-            a09_dosazeno_procent.Mainx();
-            a09_dosazeno_procent.Mainx_reseni();
+            //a09_dosazeno_procent.Mainx();
+            //a09_dosazeno_procent.Mainx_reseni();
+            //a10_radiany_na_stupne.Mainx();
+            //a10_radiany_na_stupne.Mainx_reseni();
+            a11_prumerna_rychlost.Mainx();
+            a11_prumerna_rychlost.Mainx_reseni();
             //A12_objemValce.Mainx();
             //A13_trojuhelnik.Mainx();
         }
