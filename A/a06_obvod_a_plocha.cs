@@ -15,6 +15,7 @@ namespace A {
 
             double polomerKruhu;
 
+            Console.WriteLine("Zadejte poloměr kruhu. Vypočítejte obvod (o=2*pi*r) a plochu (P=pi*r^2).");
             Console.WriteLine("Zadejte poloměr kruhu, abych ti mohl vypočítat obvod a plochu");
             polomerKruhu = double.Parse(Console.ReadLine());
 

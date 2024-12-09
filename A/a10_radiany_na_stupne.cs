@@ -21,6 +21,10 @@ namespace A {
             const double plnyKruh = 360;
 
             jedenRadian = plnyKruh / (2 * Math.PI);
+            Console.WriteLine("Převeďte úhel zadaný v radiánech na stupně.\r\n" +
+                              "Návod: řešte trojčlenkou. Plnému kruhu odpovídá 360 stupňů nebo 2 pí radiánů (přibližně 6,28 radiánů).\r\n" +
+                              "Tedy jeden radián je 180/  = 57,296 stupňů.\r\n" +
+                              "Kdo neví, co jsou radiány, tak tento program nemusí vypracovávat.");
             Console.WriteLine("Zadejte úhel v radiánech a já ti to převedu na stupně");
             radialyNaStupne = double.Parse(Console.ReadLine());
 

@@ -9,6 +9,8 @@ namespace A {
         public static void Mainx() {
             //a3) Zadejte teplotu v 6, 12 a 18 hodin. Zobrazí se průměrná denní teplota.
             float teplotaV6h, teplotaVe12h, teplotaV18h, prumernaTeplota;
+
+            Console.WriteLine("Zadejte teplotu v 6, 12 a 18 hodin. Zobrazí se průměrná denní teplota.");
             Console.WriteLine("Zadej teplotu v °C, která byla v 6h");
             teplotaV6h = float.Parse(Console.ReadLine());
             Console.WriteLine("Zadej teplotu v °C, která byla ve 12h", "Teplota ve 12h");

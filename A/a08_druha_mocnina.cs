@@ -14,6 +14,7 @@ namespace A {
 
             double zadaneCislo;
 
+            Console.WriteLine("Zadejte číslo, počítač vypíše: Druhá mocnina čísla… je...  (příliš lehké)");
             Console.WriteLine("Zadejte číslo a já Vám napíšu, jaká je jeho druhá mocnina.");
             zadaneCislo = double.Parse(Console.ReadLine());
 

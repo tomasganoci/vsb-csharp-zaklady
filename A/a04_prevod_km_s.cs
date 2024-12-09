@@ -14,6 +14,7 @@ namespace A {
             long mZaSek;
             float kmZaHod; //mZaSek = m/s, kmZaHod = km/h
 
+            Console.WriteLine("Zadejte rychlost v m/s a převeďte na km/hod.");
             Console.WriteLine("Zadejte rychlost v m/s a já ti to převedu na km/h");
             mZaSek = long.Parse(Console.ReadLine());
             kmZaHod = (mZaSek * 60) * 60 / 1000;

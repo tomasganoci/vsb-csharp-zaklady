@@ -15,6 +15,8 @@ namespace A {
 
             float delkaTrati, casNaTrati, prumernaRychlost;
 
+            Console.WriteLine("Sestavte program, který se zeptá na délku běžecké trati v metrech a poté na čas běžce na této trati ve vteřinách.\r\n" +
+                              "Poté zobrazí, jakou průměrnou rychlostí v [km/hod] běžec běžel. (program Doc. Homoly)");
             Console.WriteLine("Jakou délku má trať? Zadejte v metrech.");
             delkaTrati = float.Parse(Console.ReadLine());
             Console.WriteLine("Za jak dlouho, běžec doběhl? Zadejte ve vteřinách.");

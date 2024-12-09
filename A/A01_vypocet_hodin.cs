@@ -13,6 +13,7 @@ namespace A {
             //a1) Zadejte počet dnů a hodin. Program vypočte, kolik je to hodin (výsledek může být reálné číslo)   
             float zadaneHodiny, zadaneDny, prevodDnuNaHodiny;
 
+            Console.WriteLine("Zadejte počet dnů a hodin. Program vypočte, kolik je to hodin (výsledek může být reálné číslo)");
             Console.WriteLine("Zadejte počet dní");
             zadaneDny = float.Parse(Console.ReadLine());
             Console.WriteLine("Zadejte počet hodin");
