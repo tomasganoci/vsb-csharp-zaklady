@@ -8,4 +8,9 @@
     <StartupObject>A.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="a10_radiany_na_stupne.cs" />
+    <Compile Remove="a11_prumerna_rychlost.cs" />
+  </ItemGroup>
+
 </Project>
