@@ -20,7 +20,7 @@ namespace A {
             kmZaHod = (mZaSek * 60) * 60 / 1000;
 
             
-            Console.WriteLine($"Podle mých výpočtů je to {kmZaHod} km/h"); //Šlo by to jednodušeni Str(mZaSek * 3.6)
+            Console.WriteLine($"Podle mých výpočtů je to {kmZaHod} km/h"); //Šlo by to jednodušeni mZaSek * 3.6)
     }
         public static void Mainx_reseni() {
             //Řešení:

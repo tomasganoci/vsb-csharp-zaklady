@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="b06_rychlejsi_auto.cs" />
+    <Compile Remove="b07_statni_utvar.cs" />
+    <Compile Remove="b09_mensi_vetsi.cs" />
+    <Compile Remove="b10_odmocnina_zaporu.cs" />
+    <Compile Remove="b11_ctverec_a_obdelnik.cs" />
+    <Compile Remove="b12_slozena_podminka.cs" />
+    <Compile Remove="b13_konec_programu.cs" />
+  </ItemGroup>
+
 </Project>

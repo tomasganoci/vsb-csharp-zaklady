@@ -31,7 +31,7 @@ namespace A {
             //kolik je to hodin(výsledek může být reálné číslo).
             //
 
-            float dny, hodiny; //float proto, že v zadání je, že výsledek může být číslo s desetinnou částí. Jinak by stačil Integer
+            float dny, hodiny; //float proto, že v zadání je, že výsledek může být číslo s desetinnou částí. Jinak by stačil int
 
             Console.WriteLine("zadej pocet dnu:");
             dny = float.Parse(Console.ReadLine());

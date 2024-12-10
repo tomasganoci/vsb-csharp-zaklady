@@ -12,14 +12,14 @@ namespace A {
         public static void Mainx() {
             //a5)Zadejte částku peněz, které jsou uloženy v bance, roční úrok a délku uložení (počet roků).
             //Vypočítejte, kolik bude v bance po uplynutí uvedené doby.
-            //Nepočítejte úroky z úroků. Modelový příklad: 1000 Kč na 2 roky s úrokem 1 % ročně = 1020 Kč
+            //Nepočítejte úroky z úroků. %elový příklad: 1000 Kč na 2 roky s úrokem 1 % ročně = 1020 Kč
 
             float rocniUrok, nasporenaCastka, vynosZaRok, vynosCelkem;
             byte pocetRoku;
 
             Console.WriteLine("Zadejte částku peněz, které jsou uloženy v bance, roční úrok a délku uložení (počet roků).\r\n" +
                               "Vypočítejte, kolik bude v bance po uplynutí uvedené doby.\r\n" +
-                              "Nepočítejte úroky z úroků. Modelový příklad: 1000 Kč na 2 roky s úrokem 1 % ročně = 1020 Kč");
+                              "Nepočítejte úroky z úroků. %elový příklad: 1000 Kč na 2 roky s úrokem 1 % ročně = 1020 Kč");
             Console.WriteLine("Zadej cílovou naspořenou částku");
             nasporenaCastka = long.Parse(Console.ReadLine());
             rocniUrok = 1;

@@ -22,7 +22,7 @@ namespace A {
             Console.WriteLine("Za jak dlouho, běžec doběhl? Zadejte ve vteřinách.");
             casNaTrati = float.Parse(Console.ReadLine());
 
-            prumernaRychlost = delkaTrati / casNaTrati * 60 * 60 / 1000; //slo by to udělat snadněji Str(Round((delka / cas * 3.6), 2)) se zaokrouhlením na 2 desetinná místa
+            prumernaRychlost = delkaTrati / casNaTrati * 60 * 60 / 1000; //slo by to udělat snadněji Round((delka / cas * 3.6), 2)) se zaokrouhlením na 2 desetinná místa
 
             Console.WriteLine($"Běžec, trať dlouhou {delkaTrati} m, uběhl průměrnou rychlostí {prumernaRychlost:f} km/h");
         }
