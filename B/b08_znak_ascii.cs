@@ -19,13 +19,13 @@ namespace B {
             //moje poznámka: taky jsem to mohl vyřešit jako v prvním řešení, ale to mě nenapadlo, že to můžu udělat i takto, nemusel jsem použít proměnnou "ascii" a mohl jsem jí rovnou zadat v "zadanyZnak".
             //               použil jsem jiné podmínky s " &&" a " || "
 
-            int zadanyZnak;
-            int ascii;
+            string zadanyZnak;
+            byte ascii;
 
             Console.WriteLine("Zadejte jeden znak a já ti řeknu, o jaký znak se jedná");
-            zadanyZnak = int.Parse(Console.ReadLine());
+            zadanyZnak = Console.ReadLine();
 
-            ascii = zadanyZnak;
+            ascii = byte.Parse(zadanyZnak);
 
             if (ascii == 32) {
                 Console.WriteLine("Toto není znak, ale mezera!");
@@ -47,31 +47,31 @@ namespace B {
             }
         }
 
-        //public static void Mainx_reseni() {
-        //    //
-        //    //Řešení:
-        //    //
-        //    //b08: Uživatel zadá znak, program odpoví, zda se jedná o písmeno,
-        //    //číslici nebo jiný znak.Řešte pomocí } else { if.
-        //    //
-        //    string znak;
+        public static void Mainx_reseni() {
+            //
+            //Řešení:
+            //
+            //b08: Uživatel zadá znak, program odpoví, zda se jedná o písmeno,
+            //číslici nebo jiný znak.Řešte pomocí } else { if.
+            //
+            char znak;
 
-        //    Console.WriteLine("Zadej znak: ");
-        //    znak = Console.ReadLine();
-        //    //ifc(znak) >= 97  &&c(znak) <= 122 {   //druhá možnost
-        //    if (znak >= "a" && znak <= "z") {
-        //        Console.WriteLine("znak je male pismeno");
-        //    }
-        //    else if (znak >= "A" && znak <= "Z") {
-        //        Console.WriteLine("znak je velke pismeno");
-        //    }
-        //    else if (znak >= "0" && znak <= "9") {
-        //        Console.WriteLine("znak je cislo");
-        //    }
-        //    else {
-        //        Console.WriteLine("znak je jiny znak");
-        //    }
-        //}
+            Console.WriteLine("Zadej znak: ");
+            znak = Convert.ToChar(Console.ReadLine());
+            //ifc(znak) >= 97  &&c(znak) <= 122 {   //druhá možnost
+            if (znak >= 'a' && znak <= 'z') {
+                Console.WriteLine("znak je male pismeno");
+            }
+            else if (znak >= 'A' && znak <= 'Z') {
+                Console.WriteLine("znak je velke pismeno");
+            }
+            else if (znak >= 'a' && znak <= 'z') {
+                Console.WriteLine("znak je cislo");
+            }
+            else {
+                Console.WriteLine("znak je jiny znak");
+            }
+        }
 
         public static void Mainx_reseni2() {
             //Druhá možnost:
@@ -79,7 +79,7 @@ namespace B {
             byte x;
 
             Console.WriteLine("Zadejte znak");
-            x = byte.Parse(Console.ReadLine());
+            x = Convert.ToByte(char.Parse(Console.ReadLine()));
             if (x < 33) {
                 Console.WriteLine("Funkční klávesa");
             }
