@@ -33,7 +33,7 @@ namespace E {
     vysledneSlovo = Console.WriteLine(Zadejte slovo, které mám vyhledat")
 
 
-    For i = 1 To pocetSlov
+    for i = 1 To pocetSlov
         if slovaPole(i) = vysledneSlovo {
             Console.WriteLine("Slovo: " + slovaPole(i) + Chr(10) + 
                     "Pořadí: " + i) + Chr(10))
@@ -44,7 +44,7 @@ namespace E {
 //Řešení:
 //e7: Zadejte postupně do pole několik slov. Každé slovo přitom budete zadávat zvlášť. Poté znovu zadejte jedno z těchto slov.
 //Program vypíše číslo pořadí, v jakém bylo toto slovo zadáno (na jaké pozici se vyskytuje v poli).
-Sub main_reseni()
+main_reseni()
     poleSlov(100) string
     zadaneSlovo string, s string, znovu string
     i int, poradi int, poslIndex int  //poslIndex: index poslední buňky pole s platným číslem
@@ -62,7 +62,7 @@ Sub main_reseni()
 
 
     znovu = Console.WriteLine(Zadej znovu jedno ze zadanych slov")
-    For i = 0 To poslIndex
+    for i = 0 To poslIndex
         if znovu = poleSlov(i) {
         poradi = i + 1
         }

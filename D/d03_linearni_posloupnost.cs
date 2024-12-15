@@ -40,7 +40,7 @@ namespace D {
 //d03: Zadejte první, druhy a poslední člen lineární celočíselné posloupnosti.
 //Program vytiskne pod sebou všechny prvky posloupnosti.
 
-Sub main_reseni()
+main_reseni()
   prvni int, druhy int, posledni int, rozdil int, dalsiCislo int
   s string
 
@@ -65,7 +65,7 @@ Sub main_reseni()
 //Program vytiskne pod sebou všechny prvky posloupnosti.
 //Varianta b: Zadá se první a druhy krok a počet prvku posloupnosti.
 
-Sub main_reseni_b()
+main_reseni_b()
   prvni int, druhy int, pocetCisel int, rozdil int, dalsiCislo int, i int
   s string
 

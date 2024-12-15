@@ -30,7 +30,7 @@ namespace E {
 
 
     Randomize
-    For i = 0 To pole
+    for i = 0 To pole
         zadanaCisla = Int(Rnd()* (100 - 1 + 1) + 1)
         cislaPole(i) = zadanaCisla
         pocetCisel = pocetCisel + 1
@@ -40,7 +40,7 @@ namespace E {
     maxCislo = cislaPole(0)
 
 
-    For i = 0 To pole
+    for i = 0 To pole
         soucetCisel = soucetCisel + cislaPole(i)
         soucetMocnin = soucetMocnin + cislaPole(i) ^ 2
         if cislaPole(i) < minCislo {
@@ -69,7 +69,7 @@ namespace E {
 //Řešení:
 //e5: Zadejte v jednom cyklu řadu čísel. V dalším cyklu program poté spočítá jejich součet, průměr, maximum, minimum.
 //Pak se program ještě zeptá, zda chcete zobrazit součet druhých mocnin.
-Sub main_reseni()
+main_reseni()
     cisla(100) int
     zadaneCislo int, soucet int, max int, min int, pocetNe0 int, soucetMocnin int, i int, poslIndex int  //poslIndex: index poslední buňky pole s platným číslem
     s string, volba string
@@ -88,7 +88,7 @@ Sub main_reseni()
     min = cisla(0)
 
 
-    For i = 0 To poslIndex
+    for i = 0 To poslIndex
         soucet = soucet + cisla(i)
 
 

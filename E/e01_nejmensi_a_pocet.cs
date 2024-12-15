@@ -38,14 +38,14 @@ namespace E {
     
     pocetZadanychCisel = i - 1
     min = pole(0)
-    For i = 0 To pocetZadanychCisel
+    for i = 0 To pocetZadanychCisel
         if min > pole(i) {
             min = pole(i)
         }
     Next
 
     pocetZadanychCisel = i - 1
-    For i = 0 To pocetZadanychCisel
+    for i = 0 To pocetZadanychCisel
         if min = pole(i) {
             pocetMin = pocetMin + 1
         }
@@ -60,7 +60,7 @@ namespace E {
  //e1:Zadejte čísla ukončená nulou.
 //Zjistěte nejmenší a vypište, kolikrát je obsaženo.
 
-Sub main_reseni()
+main_reseni()
     cisla(100) int
     zadaneCislo int, i int, min int, pocetMin int, poslIndex int  //poslIndex: index poslední buňky pole s platným číslem
     s string
@@ -76,19 +76,19 @@ Sub main_reseni()
     Loop Until zadaneCislo = 0
     poslIndex = i - 1  //Tím se kompenzuje i = i + 1 za posledním číslem
     min = cisla(0)
-    For i = 1 To poslIndex
+    for i = 1 To poslIndex
         if cisla(i) < min {
             min = cisla(i)
         }
     Next
-    For i = 0 To poslIndex
+    for i = 0 To poslIndex
         if min = cisla(i) {
             pocetMin = pocetMin + 1
         }
     Next
     MsgBox s + vbCrLf + "Nejmenší číslo v řadě je " + min) + " a vyskytuje se tam " + pocetMin) + " krát."
 
-Sub main2_reseni()
+main2_reseni()
     //ukázka, že to jde zvládnout i jednou smyčkou. Tím pádem je ale pole zbytečné.
     cislo byte
     min byte, pocetMin byte, i byte

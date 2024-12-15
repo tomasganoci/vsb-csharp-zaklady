@@ -24,7 +24,7 @@ namespace C {
     max = 10
     
     pocetChyb = 0
-    For i = 1 To 10
+    for i = 1 To 10
         cislo1 = Int(Rnd()* (max - min + 1) + min)
         cislo2 = Int(Rnd()* (max - min + 1) + min)
         vysledekZadani = Console.WriteLine(Příklad:" + cislo1) + " *" + cislo2) + " =")
@@ -65,7 +65,7 @@ Sub main_reseni()
     pocetDobre = 0: pocetSpatne = 0
     rozsah = 10 - 1 + 1
     Randomize
-    For i = 1 To 10
+    for i = 1 To 10
         nah = Int(Rnd()* rozsah) + 1
         nah2 = Int(Rnd()* rozsah) + 1
         vys = InputBox(nah) + " * " + nah2), "mala nasobilka")

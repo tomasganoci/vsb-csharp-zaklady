@@ -50,7 +50,7 @@ End Function
 //Sestavte funkci Kurs, která má dva parametry: prvním je číslo ve významu korun, druhým je tříznakový řetězec ve významu kódu měny ("EUR", "USD", "GBP"), na kterou se tyto koruny mají vyměnit.
 //Výsledkem volání funkce je částka v dané měně, rovnající se danému počtu korun (nebo hodnota -1, jestliže jde o měnu, pro kterou není kurs znám). (program Doc. Homoly)
 
-Sub main_reseni()
+main_reseni()
     kc int, castka float
     kodMeny string
 

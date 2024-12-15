@@ -28,7 +28,7 @@ namespace E {
 
 
     Randomize
-    For i = 0 To 4
+    for i = 0 To 4
         nahodnePismeno = Chr(Int(Rnd()* (90 - 65 + 1) + 65))
         polePismen(i) = nahodnePismeno
     Next
@@ -43,9 +43,9 @@ namespace E {
 
     slovo = \"
     vypisSlov = \"
-    For pocetSlov = 0 To 9
+    for pocetSlov = 0 To 9
         slovo = \"
-        For i = 0 To 4
+        for i = 0 To 4
             nahodneCislo = Int(Rnd()* (pole - 0 + 1))
             Do While polePismen(nahodneCislo) = \"
                 nahodneCislo = Int(Rnd()* (pole - 0 + 1))
@@ -63,14 +63,14 @@ namespace E {
 //Písmena se mohou opakovat a nemusí být použita všechna. Pozn. zadávání můžete ukončit třeba číslem 0 nebo třeba stiskem klávesy enter.
 //Varianta pro pokročilé: vygenerujte těch slov třeba 10)
 //Varianta: Místo zadání z klávesnice vygeneruje prvotních několik písmen počítač.
-Sub main_reseni()
+main_reseni()
     znaky(10) string
     znak string, s1 string, s2 string
     i int, nah int, j int, delkaSlova int, pocetZnaku int
     i = 0: s1 = \": s2 = \"              //proměnná j se zde neinicializuje. Ta se inicializuje ve smyčce for.
      
     //pocetZnaku = 5                      //varianta pro generování místo zadání z klávesnice
-    //For i = 0 To pocetZnaku - 1
+    //for i = 0 To pocetZnaku - 1
     //    znaky(i) = Chr(Int(Rnd() * 26) + 97)
     //    s1 = s1 + " " + znaky(i)
     //Next
@@ -87,8 +87,8 @@ Sub main_reseni()
     delkaSlova = 5
 
 
-    For j = 1 To 10                       //tento řádek navíc pro variantu
-        For i = 0 To delkaSlova - 1
+    for j = 1 To 10                       //tento řádek navíc pro variantu
+        for i = 0 To delkaSlova - 1
             //nah = Rnd() * (pocetZnaku - 1)  chyba: nelze využívat toho, že VB je ochoten Double uložit o int
             nah = Int(Rnd()* pocetZnaku)
             s2 = s2 + znaky(nah)

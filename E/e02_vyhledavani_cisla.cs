@@ -31,7 +31,7 @@ namespace E {
     vyhledatCislo = Console.WriteLine(Jaké číslo mám najít?\nZ těchto čísel:" + Chr(10) + zadaneCisla)
     
     pocetVyhledanychCisel = 0
-    For i = 0 To 100
+    for i = 0 To 100
         if pole(i) = vyhledatCislo {
             pocetVyhledanychCisel = pocetVyhledanychCisel + 1
         }
@@ -47,7 +47,7 @@ namespace E {
 //e2: Zadejte řadu čísel ukončenou nulou. Potom zadáte některé z předtím zadaných čísel.
 //Program vypíše, kolikrát toto číslo předtím padlo.
 
-Sub main_reseni()
+main_reseni()
   cisla(100) int
   i int, cislo int, hledej int, poslIndex int  //poslIndex: index poslední buňky pole s platným číslem
   s string
@@ -67,7 +67,7 @@ Sub main_reseni()
   hledej = Console.WriteLine(Zadej nějaké předchozí číslo ")
 
 
-  For i = 0 To poslIndex
+  for i = 0 To poslIndex
       if cisla(i) = hledej {
         poc = poc + 1
     }

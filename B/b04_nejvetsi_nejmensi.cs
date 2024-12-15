@@ -104,7 +104,7 @@ namespace B {
 
         public static void Mainx_reseni2() {
             //Následuje efektivnější algoritmus, obsahuje jen čtyři testování podmínek:
-            //Sub main2()
+            //main2()
             float a, b, c, max, min;
 
             Console.WriteLine("Zadej prvni cislo: ");

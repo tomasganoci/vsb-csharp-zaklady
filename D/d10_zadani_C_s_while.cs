@@ -20,7 +20,7 @@ namespace D {
 //Nevadí, když místo 0,0998 bude ,0998
 //Moje poznámky: špatně jsem pochopil zadání a tak jsem nedal do 2* PI ale do 2. asi "krok" je lepší na pochopení, protože se liší od "index",
 
-Sub main_C01()
+main_C01()
     sinus string
     krok float
     Const pi = 3.14159
@@ -50,7 +50,7 @@ Sub main_C01()
 //oznamte hodnotu proměnné pocetCiselVIntervalu
 //Moje poznámky: nedoplnil jsem, jaké čísla byli v rozsahu, vzal jsem to hodně stručně, doplnil jsem vygenerované čísla (vygenerovaneCisla) a jeké čísla byli v rozsahu (cislaVRozsahu)
 
-Sub main_C02()
+main_C02()
     nahodneCislo float
     min int, max int
     i byte, pocetCiselVIntervalu byte
@@ -82,7 +82,7 @@ Sub main_C02()
 //3)  Vytvořte program, který táhne 5 čísel Sportky (čísla 1 až 49). Čísla se (na rozdíl od Sportky) mohou opakovat.
 //Moje poznámky: dává rozsah už do proměnné, já dávám celý vzorec do smyčky,
 
-Sub main_C03()
+main_C03()
     cisloSportky string
     i byte
     min int, max int
@@ -107,7 +107,7 @@ Sub main_C03()
 //4)  Vypište klesající posloupnost čísel od 8 do -8.  Varianta: vypište stejnou posloupnost, ale pouze každé druhé (sudé) číslo. (Nepoužívejte if.)
 //Moje poznámky: jen jsem doplnil nadpis okna,
 
-Sub main_C04()
+main_C04()
     i int, min int, max int
     klesajiciCislo string, klesajiciSudeCislo string
 
@@ -139,7 +139,7 @@ Sub main_C04()
 //5)  Vygenerujte 20 celých náhodných celých čísel v rozsahu 10..50. Zjistěte, o kolik se jejich střední hodnota (průměr) liší od středu intervalu, tedy od 30.
 //Moje poznámky: doplněná větší mezera mezi čísly, doplněn v msgboxu index, v řešní je pouze průměr rozdílu v intervalu, já ho doplnil ke každému číslu, ještě doplním průměr rozdílu celkově
 
-Sub main_C05()
+main_C05()
     nahodneCisloRetezec string
     min int, max int, prumerMinMax int, nahodneCislo int, scitaniRozdilu int, rozdil int
     i byte, delitelPrumeru byte
@@ -169,7 +169,7 @@ Sub main_C05()
 
 //6)  Zadejte, kolik je tříd ve škole. Potom postupně zadávejte, kolik je v každé třídě žáků. Program spočítá, kolik je žáků v celé škole a průměrný počet žáků ve třídě. (obdoba d1)
 //Moje poznámky: zase jsem nedoplnil jaká čísla byli zadané, v průměru jsem nepoužil zaokrouhlení,
-Sub main_C06()
+main_C06()
     pocetTrid int, pocetZaku int, soucetZaku int, prumerZaku int
     zakuVeTride string
     i byte
@@ -197,7 +197,7 @@ Sub main_C06()
 //Vypište s dvěma desetinnými čísly.
 //Moje poznámky: Udělal jsem jinak podmínku. V řešení je to uděláno elegantněji. Doplnil jsem oproti řešení každou minutu a tím se to moc dobře nevleze na šířku msgBoxu.
 
-Sub main_C07()
+main_C07()
     minuta string
     kurzEura float, min float, max float
     i byte
@@ -224,7 +224,7 @@ Sub main_C07()
 //8)  Zadej celé kladné číslo a pak program vypíše součet celých čísel od jedné do udaného čísla
 //nepochopil jsem zadání, tak jsem to programoval špatně.
 
-Sub main_C08()
+main_C08()
     zadaneCislo int, i int, soucetCisel int
 
 
@@ -247,7 +247,7 @@ Sub main_C08()
 //A po smyčce zjistit, zda je počet nulový: v tom případě se jedná o prvočíslo.
 //Moje poznámky: pro "i" jsem vydělil číslo 2, aby nebylo tolik opakování, v řešení je podmínka vyřešena lépe pomoci boolean, já jsem použil neomezené číslo a né jen 100,
 
-Sub main_C09()
+main_C09()
     zadaneCislo int
     delitele string
     i int, prvocislo int
@@ -276,7 +276,7 @@ Sub main_C09()
 //10) Vytvořte program pro zkoušení malé násobilky. Program zadává náhodně násobení čísel od 1 do 10, např. 5*6=, 8*4= atd.
 //Uživatel napíše výsledek. Pokud to je špatně, napíše počítač správný výsledek. Celkem 10 příkladů, nakonec se zobrazí počet chyb.
 //Moje poznámky: v řeření je funkce "Randomize", neměl jsem přidaný "počet správných" výsledků
-Sub main_C10()
+main_C10()
     pocetChyb int, min int, max int, vysledekZadani int, vysledek int, pocetPrikladu int
     cislo1 float, cislo2 float
     i byte
@@ -320,7 +320,7 @@ Sub main_C10()
 
 //11) Tabulka ASCII: zobrazit v  MsgBoxu v levém sloupci čísla např. 65 až 100 a v pravém příslušný znak.
 //Moje poznámky: nemám "hlavičku", zapomněl jsem inicializaci asci,
-Sub main_C11()
+main_C11()
     asci string
     i byte
 
@@ -343,14 +343,14 @@ Sub main_C11()
 //01 Vypište tabulku funkce sinus od 0 do 2*PI s krokem 0,1.
 //Aby bylo možno výsledek zkontrolovat, tak program musí mít jen jeden MsgBox,
 //ve kterém budou všechna zadaná (či generovaná) čísla a poté výsledek.
-Sub main_reseni()
+main_reseni()
   krok float
   s string
   Const pi = 3.14159
 
 
   s = \": krok = 0
-  //For krok = 0 To 2 * PI Step 0.1
+  //for krok = 0 To 2 * PI Step 0.1
   Do
       s = s + "sin " + Round(krok, 2)) + Chr(9) + "je " + Round(Sin(krok), 4)) + Chr(10)
       krok = krok + 0.1                             //toto přidáno
@@ -360,7 +360,7 @@ Sub main_reseni()
 
 //Program vygeneruje deset celých čísel (např. od -100 do 100).
 //Zjistěte, kolik z nich je v určitém intervalu (např. od 10 do 50)
-Sub main1_reseni()
+main1_reseni()
   i int, rozsah int
   nah float
   s string, e string
@@ -370,7 +370,7 @@ Sub main1_reseni()
   i = 1
   
   rozsah = 100 - (-90) + 1
-  //For i = 1 To 10
+  //for i = 1 To 10
   Do
     e = \"
     nah = Int(Rnd()* rozsah) - 90

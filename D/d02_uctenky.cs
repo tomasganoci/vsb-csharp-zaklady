@@ -56,7 +56,7 @@ namespace D {
 //Proto částky na účtenkách budete zadávat postupně, jako poslední zadáte nulu.
 //Program spočítá, kolik jste utratili a zároveň oznámí, kolik nákupů přesáhlo částku 100 Kč.
 
-Sub main_reseni()
+main_reseni()
   castka float, suma float
   pocet100 byte
 

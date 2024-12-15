@@ -19,7 +19,7 @@ namespace C {
     zadaneCislo = Console.WriteLine(Zadejte kladné číslo, a já ti vypíšu součet celých čísel do zadaného čísla")
     soucetCisel = 0
     
-    For i = 1 To zadaneCislo
+    for i = 1 To zadaneCislo
         soucetCisel = soucetCisel + i
     Next
     Console.WriteLine("Celkový součet zadaných čísel je:" + soucetCisel))
@@ -33,7 +33,7 @@ i int, max int, sum int
 
 max = Console.WriteLine(Zadej cislo")
 sum = 0
-For i = 1 To max
+for i = 1 To max
   sum = sum + i
 Next
 MsgBox sum, , "Soucet cisel do daneho cisla je"

@@ -31,7 +31,7 @@ End Function
 //Řešení:
 //f02) Napište funkci, které se zadá znak a která vrátí jeho ASCII hodnotu.
 
-Sub main_reseni()
+main_reseni()
     znak string, ascii byte
     znak = Console.WriteLine(Zadej znak!")
     ascii =ciiHodnota(znak)
@@ -47,10 +47,10 @@ End Function
 //Druhá možnost: kdybychom se chtěli vyhnout hotové funkcic
 FunctionciiHodnota2(zadanyZnak string) byte
     i byte
-    For i = 32 To 254
+    for i = 32 To 254
         if Chr(i) = zadanyZnak {
            ciiHodnota2 = i
-            Exit For  //ukončuje smyčku, neboť se nemusí už dál kontrolovat
+            Exit for  //ukončuje smyčku, neboť se nemusí už dál kontrolovat
         }
     Next
 End Function

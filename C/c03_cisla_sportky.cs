@@ -25,7 +25,7 @@ namespace C {
     rozsah = (max - min + 1) + min
 
     cisloSportky = \"
-    For i = 0 To 4
+    for i = 0 To 4
         cisloSportky = cisloSportky + Int(Rnd()* rozsah)) + ","
     Next
     Console.WriteLine("Rozsah: " + min) + " ->" + max) + Chr(10) + 
@@ -44,7 +44,7 @@ Sub main_puvodni()
     max = 49
     
     cisloSportky = \"
-    For i = 0 To 4
+    for i = 0 To 4
         cisloSportky = cisloSportky + Int(Rnd()* (max - min + 1) + min)) + ","
     Next
     Console.WriteLine("Rozsah: " + min) + " ->" + max) + Chr(10) + 
@@ -66,7 +66,7 @@ Sub main_reseni()
 
   s = "Cisla sportky:  "
   rozsah = 49 - 1 + 1
-  For i = 1 To 5
+  for i = 1 To 5
     tah = Int(Rnd()* rozsah) + 1
     s = s + tah) + ",  "
   Next

@@ -51,7 +51,7 @@ namespace D {
 //Nesmí se tedy stát, že při zadání 30 a 0 (tedy jen jedna třída a to s 30 žáky)
 //vyjde průměrný počet žáků 15 (omylem se uvažovaly dvě třídy, jedna má 30 a druhá 0 žáků)
 
-Sub main_reseni()
+main_reseni()
   pocetTrid byte, pocetZaku byte
   suma int
   Prumer float

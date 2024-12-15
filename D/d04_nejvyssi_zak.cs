@@ -42,7 +42,7 @@ namespace D {
 //Prázdné jméno načítání ukončuje. Poté zobrazí jméno a výšku nejvyššího žáka.
 //------ když nejvyšší jsou 2 a více, tak stačí, když napíše jen jednoho -------
 
-Sub main_reseni()
+main_reseni()
   jmeno string, jmenoMax string
   vyska byte, vyskaMax byte
   zadanAsponJedenZak bool

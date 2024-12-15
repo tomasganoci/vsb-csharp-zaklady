@@ -38,7 +38,7 @@ End Function
 //Zadejte počet dnů a hodin. Program vypočte,
 //kolik je to hodin (výsledek může být reálné číslo).
 
-Sub main_receni()
+main_receni()
 dny int, hodiny int
 dny = Console.WriteLine(zadej pocet dnu:")
 hodiny = Console.WriteLine(zadej pocet hodin:")

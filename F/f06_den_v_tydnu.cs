@@ -66,7 +66,7 @@ End Function
 
 //Řešení:
 //f6: Funkce, které se předá číslo 1 až 7 a vrací slovně den v týdnu. Vytvořte variantu s } else { if i se Select Case.
-Sub main_reseni()
+main_reseni()
     cisloDne int
 
     cisloDne = Console.WriteLine(Zadej cislo dne (1-7)")

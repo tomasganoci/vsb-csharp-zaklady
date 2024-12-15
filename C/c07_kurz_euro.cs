@@ -25,7 +25,7 @@ namespace C {
     max = 28
     
     minuta = \"
-    For i = 1 To 20
+    for i = 1 To 20
         kurzEura = Round(Rnd()* (max - min) + min, 2) //zaokrouhleno na 2 místa, odebráno ze vzorce +1,
         if i % 5 {
             minuta = minuta + i) + " min:" + kurzEura) + " "
@@ -47,7 +47,7 @@ Sub main_reseni()
   s string
   s = \"
  
-  For i = 1 To 20
+  for i = 1 To 20
     nah = Round(Rnd()* 2 + 26, 2)
     s = s + nah) + Chr(9)
     if i % 5 = 0 { s = s + Chr(10)
@@ -70,7 +70,7 @@ Sub main_reseni()
 
 
     cislo = \"
-    For i = 1 To 20
+    for i = 1 To 20
         cislo = cislo + i) + Chr(9)
             if i % 5 = 0 {
                 cislo = cislo + Chr(10)
@@ -89,7 +89,7 @@ Sub main_7b_reseni()
   s string
   s = \"
  
-  For i = 1 To 20
+  for i = 1 To 20
     s = s + i) + Chr(9)
     if i % 5 = 0 { s = s + Chr(10)
   Next

@@ -40,7 +40,7 @@ namespace D {
 //d07: Program hází kostkou tak dlouho, dokud nepadne šestka.
 //Potom vypíše, kolik hodů bylo potřeba.
 
-Sub main_reseni()
+main_reseni()
   nah float
   i byte
   s string

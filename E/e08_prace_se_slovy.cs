@@ -33,7 +33,7 @@ namespace E {
     vypisLiche = "Pořadí liché      Slovo" + Chr(10)
 
 
-    For i = posledniIndex To 1 Step -1
+    for i = posledniIndex To 1 Step -1
         vypisSlov = vypisSlov + i) + "                        " + slovaPole(i) + Chr(10)
         if i % 2 = 0 {
             vypisSude = vypisSude + i) + "                        " + slovaPole(i) + Chr(10)
@@ -47,7 +47,7 @@ namespace E {
 //Řešení:
 //e8: Řadu slov z předchozího příkladu vypište v obráceném pořadí,
 //a pak vypíše pouze sudá a pak pouze lichá slova.
-Sub main_reseni()
+main_reseni()
     poleSlov(100) string
     vstup string, s string, sZpet string, sLicha string, sSuda string
     i int, j int, poslIndex int  //poslIndex: index poslední buňky pole s platným číslem
@@ -64,11 +64,11 @@ Sub main_reseni()
     poslIndex = i - 1   //Tím se kompenzuje i = i + 1 za posledním číslerm
 
 
-    For i = poslIndex To 0 Step -1
+    for i = poslIndex To 0 Step -1
         sZpet = sZpet + Chr(10) + poleSlov(i)
     Next
 
-    For j = 0 To poslIndex
+    for j = 0 To poslIndex
         if (j + 1) % 2 = 0 {
             sSuda = sSuda + Chr(10) + poleSlov(j)
         } else {

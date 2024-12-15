@@ -48,7 +48,7 @@ End Function
 
 //Řešení:
 //f7) Metodě se zadá znak a metoda vypíše (nebo vrací) slovy: písmeno (pozná malé i velké), číslice, ostatní.
-Sub main_reseni()
+main_reseni()
     vstup string
     vstup = Console.WriteLine(Zadej znak")
     MsgBox TypZnaku(vstup)

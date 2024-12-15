@@ -42,7 +42,7 @@ namespace D {
 //d08: Varianta příkladu ze skupiny b: Uživatel opakovaně zadá znak, program vždy odpoví, zda se jedná o písmeno,
 //číslici nebo jiný znak. Zadávání končí zadáním prázdného znaku (tedy jen ENTER). Řešte pomocí } else { if.
 
-Sub main_reseni()
+main_reseni()
 znak string  //ve Visual studiu by se použil typ Char
 
 Do
@@ -65,7 +65,7 @@ Loop Until znak = \"
 //d08: Varianta příkladu ze skupiny b: Uživatel opakovaně zadá znak, program vždy odpoví, zda se jedná o písmeno,
 //číslici nebo jiný znak. Zadávání končí zadáním prázdného znaku (tedy jen ENTER). Řešte pomocí } else { if.
 
-Sub main_reseni_b()  //Tato verze je přehlednější, neboť v ní není vnořená podmínka
+main_reseni_b()  //Tato verze je přehlednější, neboť v ní není vnořená podmínka
 znak string, s string  //ve Visual studiu by se použil typ Char
 
 Do

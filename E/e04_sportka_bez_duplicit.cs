@@ -29,17 +29,17 @@ namespace E {
     soupisTazenych string
 
 
-    For i = i To maxCisel
+    for i = i To maxCisel
         cislaSportky(i) = i
     Next i
 
     Randomize
 //    i = 1
     soupisTazenych = \"
-    For i = 1 To pocetTazenych
+    for i = 1 To pocetTazenych
 //    Do
         tazenaCisla(i) = cislaSportky(Int(Rnd()* (maxCisel + 1 - 1) + 1))
-        For d = 1 To pocetTazenych
+        for d = 1 To pocetTazenych
             if i<> d  && tazenaCisla(i) = tazenaCisla(d) {
                 tazenaCisla(i) = cislaSportky(Int(Rnd() * (maxCisel + 1 - 1) + 1))
                 d = 0
@@ -57,7 +57,7 @@ namespace E {
 //e4: Upravte program pro Sportku (c3) tak, aby se tažená čísla nemohla opakovat.
 //Testujte na větším počtu tahů, aby se opakování projevilo.
 //ještě lépe se projeví, pokud budete testovat na hodech kostkou (1-6), také nemá padnout stejné číslo dvakrát
-Sub SportkaBezOpakovani()
+SportkaBezOpakovani()
     Const POCET_TAHU = 5
     tahy(POCET_TAHU - 1) byte
     i byte, j byte
@@ -75,11 +75,11 @@ Sub SportkaBezOpakovani()
         tahy(i) = Int(Rnd()* 49) + 1           //všimněte si, že čísla 1 až 49 padají, když se při použití Round násobí *48. Při Int *49
                                                 //testovat na  * 6 místo * 49
         s = s + Chr(10) + i) + " " + tahy(i))
-        For j = 0 To i - 1
+        for j = 0 To i - 1
             if tahy(j) = tahy(i) {
                 s = s + " opakovat"
                 i = i - 1
-                Exit For
+                Exit for
             }
         Next j
     Loop While i<POCET_TAHU - 1

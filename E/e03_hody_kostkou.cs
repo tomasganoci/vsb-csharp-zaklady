@@ -30,13 +30,13 @@ namespace E {
 
 
     Randomize
-    For i = 0 To pole
+    for i = 0 To pole
         hodKostkou = Int((Rnd()* (6 - 1 + 1) + 1))
         hodyKostkou(i) = hodKostkou
         soucetHoduKostkou = soucetHoduKostkou + hodyKostkou(i)
     Next
 
-    For i = 0 To pole
+    for i = 0 To pole
         if hodyKostkou(i) = 1 {
             pocetHodu(1) = pocetHodu(1) + 1
         } else {if hodyKostkou(i) = 2 {
@@ -52,7 +52,7 @@ namespace E {
         }
     Next
 
-    For i = 1 To 6
+    for i = 1 To 6
         soucetPoctuHodu = Round(soucetPoctuHodu + pocetHodu(i), 2)
     Next
     prumerHodu = soucetHoduKostkou / soucetPoctuHodu
@@ -68,17 +68,17 @@ namespace E {
 //e03) Vygenerujte několik hodů kostkou. Program vypíše,
 //kolikrát padla jednotlivá čísla a vyjádří procentuálně. Jaký byl průměr?
 
-Sub main_reseni()
+main_reseni()
     Const pocetHodu int = 200:
     hody(pocetHodu - 1) int, cetnosti(6) int  //pozor, cetnosti zde má 7 buněk
     hod int, sumaHodu int, i int
     s1 string, s2 string
     s1 = \": s2 = \": sumaHodu = 0
-    For i = 1 To 6
+    for i = 1 To 6
         cetnosti(i) = 0            //inicializace, nultá buňka se nevyužívá
     Next
 
-    For i = 0 To pocetHodu - 1
+    for i = 0 To pocetHodu - 1
         //hody(i) = Rnd() * 5 + 1        //toto zdánlivě funguje.Je ale špatně ukládat náhodné číslo typu Double do proměnné typu int
         //hody(i) = Round(Rnd() * 5) + 1 //zdánlivě funguje.Ale padá jedniček a šestek jen polovina toho, co ostatních
         //výsledkem Rnd() * 6 jsou čísla od 0 do 5,99999. Po odřezání desetinné části funkcí Int dostaneme celá čísla v rozsahu 0 až 5. Proto musíme ještě přičíst 1
@@ -92,11 +92,11 @@ Sub main_reseni()
             s1 = s1 + " " + hody(i))     //místo " " lze i Chr(32), ale je to hůře srozumitelné
         }
     Next
-    For i = 0 To pocetHodu - 1
+    for i = 0 To pocetHodu - 1
         hod = hody(i)
         cetnosti(hod) = cetnosti(hod) + 1  //Toto není úplně košer, protože nultá buňka pole se nevyužívá. Lepší (ale méně pochopitelné) by bylo ukládat do cetnosti(hod - 1)
     Next
-    For i = 1 To 6
+    for i = 1 To 6
         s2 = s2 + Chr(10) + "Cislo " + i) + " padlo " + cetnosti(i)) + " krat " + Chr(9) + cetnosti(i) / pocetHodu * 100) + "%"
     Next
     MsgBox s1 + vbCrLf + "Statistiky hodů:" + s2 + Chr(10) + "Průměrný hod má hodnotu:" + Chr(9) + sumaHodu / pocetHodu)
@@ -104,20 +104,20 @@ Sub main_reseni()
 
 
 //Méně vhodné řešení, místo pole cetnosti jsou zde samostatné proměnné pro počty, kolikrát padly jednotlivé hodnoty (tedy jednicek, dvojek atd)
-Sub StatistikapocetHodu()
+StatistikapocetHodu()
     hody(1000) byte
     i int, soucet int, jednicek int, dvojek int, trojek int, ctyrek int, petek int, sestek int, pocetHodu int
     Prumer float
     jednicek = 0: dvojek = 0: trojek = 0: ctyrek = 0: petek = 0: sestek = 0: soucet = 0
     
     pocetHodu = Console.WriteLine(kolikrat mam hodit kostkou?")
-    For i = 0 To pocetHodu - 1
+    for i = 0 To pocetHodu - 1
         //hody(i) = (Rnd() * 5) + 1      //je to špatně po formální stránce, ale hlavně padá jedniček a šestek jen polovina toho, co ostatních
         hody(i) = Int(Rnd()* 6) + 1
     Next i
 
 
-    For i = 0 To pocetHodu - 1
+    for i = 0 To pocetHodu - 1
         if hody(i) = 1 {
             jednicek = jednicek + 1
         } else {if hody(i) = 2 {

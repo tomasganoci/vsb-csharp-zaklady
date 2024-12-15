@@ -50,7 +50,7 @@ End Function
 //f03) Napište šifrovací funkci, které se předá znak a která vrátí následující znak v anglické abecedě.
 //Tedy znak, jehož pozice v ASCII tabulce je o jedno vyšší (pro "z" vrátí "a").
 
-Sub main_reseni()
+main_reseni()
     zadanyZnak string, sifra string, sifraMalaIVelka string
 
 
@@ -80,7 +80,7 @@ End Function
 
 //Poté program zdokonalte tak, aby se funkci předalo i číslo n a funkce pak v ASCII tabulce posouvá o n.
 
-Sub main1_reseni()
+main1_reseni()
     znak string, sifra string, sifra% string
     posun byte
 

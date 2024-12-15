@@ -28,7 +28,7 @@ namespace C {
 
     delitele = "Dělitele čísla" + zadaneCislo) + " je" + Chr(10)
     prvocislo = 0
-    For i = 2 To zadaneCislo / 2
+    for i = 2 To zadaneCislo / 2
         if zadaneCislo % i = 0 {
             delitele = delitele + i) + Chr(10)
             prvocislo = prvocislo + 1
@@ -59,7 +59,7 @@ Sub main_reseni()
 
 
   cislo = Console.WriteLine(Zadej cislo [3-100]", "Delitele cisla")
-  For i = 2 To cislo - 1
+  for i = 2 To cislo - 1
       if(cislo % i) = 0 {
         s = s + i) + Chr(10)
         jePrvocislo = False

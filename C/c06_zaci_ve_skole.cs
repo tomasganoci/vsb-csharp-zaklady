@@ -22,7 +22,7 @@ namespace C {
 
 
     soucetZaku = 0
-    For i = 1 To pocetTrid
+    for i = 1 To pocetTrid
         pocetZaku = Console.WriteLine(Zadej pocet žáků ve třídě číslo" + i))
         soucetZaku = soucetZaku + pocetZaku
         zakuVeTride = zakuVeTride + i) + " třída" + " a žáku" + pocetZaku) + Chr(10)
@@ -50,7 +50,7 @@ Sub main_reseni()
   tridy = Console.WriteLine(Zadej pocet trid na skole", "Pocet zaku")
 
 
-  For i = 1 To tridy
+  for i = 1 To tridy
     zaku = Console.WriteLine(Kolik je žáků v " + i) + ". třídě?")
     celkem = celkem + zaku
     s = s + Chr(10) + i) + Chr(9) + zaku)

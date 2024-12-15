@@ -46,7 +46,7 @@ namespace D {
 //d06: Program Doc. Homoly: Sestavte program, který si myslí (náhodně vygeneruje) celé číslo z intervalu <1,10>.
 //Pak ho vy hádáte (zadáváte z klávesnice), dokud se nestrefíte. Počítač vypíše, na který pokus se to podařilo.
 
-Sub main_reseni()
+main_reseni()
   nah byte, hadam byte, i byte
 
 

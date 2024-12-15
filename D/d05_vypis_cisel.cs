@@ -72,7 +72,7 @@ namespace D {
 //Případně ještě vypíše ta z nich, která jsou sudá a jejich počet.
 //Případně ještě vypíše ta z nich, která jsou větší, než první číslo.
 
-Sub main_reseni()
+main_reseni()
   cislo long, suma long, max long, prvni long
   s string, strSuda string, vys string
   pocet byte, pocetSudych byte
@@ -121,7 +121,7 @@ Sub main_reseni()
 //Případně ještě vypíše ta z nich, která jsou sudá a jejich počet.
 //Případně ještě vypíše ta z nich, která jsou větší, než první číslo.
 
-Sub main_reseni_b()
+main_reseni_b()
   //tato varianta je elegantnější než předchozí, protože přesunem inputboxu na konec smyčky
   //se zmenšilo množství příkazů, které se mají provést před smyčkou.
   //Také se ušetřilo vyhodnocování podmínky if cislo <> 0 ve smyčce, protože

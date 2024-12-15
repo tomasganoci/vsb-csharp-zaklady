@@ -7,4 +7,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="c03_cisla_sportky.cs" />
+    <Compile Remove="c06_zaci_ve_skole.cs" />
+    <Compile Remove="c07_kurz_euro.cs" />
+    <Compile Remove="c08_soucet_celych_cisel.cs" />
+    <Compile Remove="c09_delitelnost_prvocislo.cs" />
+    <Compile Remove="c10_mala_nasobilka.cs" />
+  </ItemGroup>
+
 </Project>

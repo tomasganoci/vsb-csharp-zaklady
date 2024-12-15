@@ -54,7 +54,7 @@ namespace D {
 //Zadávání ukončí zadáním teploty přesahující 100°
 //(tato teplota je ale také součástí dat!). Program zobrazí zadané teploty, minimální teplotu
 //a kolikátá v pořadí tato teplota byla. A také průměr teplot
-Sub main_reseni()
+main_reseni()
     teplota float, minT float, sum float
     i byte, poradi byte
     s string
