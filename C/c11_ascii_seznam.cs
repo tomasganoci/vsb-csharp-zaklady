@@ -15,7 +15,7 @@ namespace C {
             //Moje poznámky: nemám "hlavičku", zapomněl jsem inicializaci asci,
 
             string asci = "ASCII\tznak\n";
-            for (int i = 65; i <= 100; i++) {
+            for (int i = 32; i <= 137; i++) {
                 asci += $"{i}\t{(Char)i}\n";
             }
             Console.WriteLine(asci);

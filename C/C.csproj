@@ -14,6 +14,7 @@
     <Compile Remove="c08_soucet_celych_cisel.cs" />
     <Compile Remove="c09_delitelnost_prvocislo.cs" />
     <Compile Remove="c10_mala_nasobilka.cs" />
+    <Compile Remove="c12_.cs" />
   </ItemGroup>
 
 </Project>
