@@ -13,6 +13,7 @@ namespace C {
             //18) Program vypíše všechna prvočísla do čísla 1000.
             //Prvočísla jsou čísla dělitelná jen jedničkou a sama sebou.
             //(použij modulo)
+
         }
     }
 }

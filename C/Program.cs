@@ -14,6 +14,10 @@
             //c11_ascii_seznam.Mainx_reseni();
             //c13_tabulka_male_nasobilky.Mainx();
             c14_hvezdy.Mainx();
+            c14_hvezdy.Mainx_varianta1();
+            //c15_nahodne_cisla.Mainx();
+            //c16_cisla_za_sebou.Mainx();
+            //c17_nahodne_hvezdicky.Mainx();
         }
     }
 }
