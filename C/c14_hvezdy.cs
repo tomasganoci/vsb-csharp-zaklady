@@ -15,6 +15,7 @@ namespace C {
             //čtyři atd.
             //Varianta 2: Totéž, ale na prvnim i druhem řádku se vytiskne hvězda, na
             //třetím a čtvrtém dvě hvězdy atd.
+            //moje poznámky: tento úkol mi trval dlouho... snad je aspoň trochu správně... asi by to šlo udělat lépe...
 
             int pocet = 10;
             string hvezdy = "";
@@ -48,7 +49,7 @@ namespace C {
                 }
                 Console.WriteLine(hvezdy);
             }
-            for (int i = hvezdy.Length-2; i >= 0; i -= 2) {
+            for (int i = hvezdy.Length - 2; i >= 0; i -= 2) {
                 hvezdy = hvezdy.Substring(0, i);
                 Console.WriteLine(hvezdy);
             }
@@ -64,11 +65,20 @@ namespace C {
 
             int pocet = 10;
             string hvezdy = "";
-            for (int i = 0; i < pocet + 1; i++) {
-                for (int j = 0; j < i; j++) {
+            int i = 0;
+            int j = 0;
+            for (i = 0; i < pocet; i++) {
+                for (j = 0; i % 2 == 0; ++j) {
                     hvezdy += "*";
+                    break;
                 }
                 Console.WriteLine(hvezdy);
+            }
+            for (i = hvezdy.Length; i >= 1; i--) {
+                hvezdy = hvezdy.Substring(0, Convert.ToInt16(hvezdy.Length) - 1);
+                for (j = 0; j <= 1; j++) {
+                    Console.WriteLine(hvezdy);
+                };
             }
         }
     }

@@ -12,12 +12,15 @@
             //c05_rozdil_v_prumeru.Mainx();
             //c11_ascii_seznam.Mainx();
             //c11_ascii_seznam.Mainx_reseni();
+            c12_jamka_golf.Mainx();
             //c13_tabulka_male_nasobilky.Mainx();
-            c14_hvezdy.Mainx();
-            c14_hvezdy.Mainx_varianta1();
+            //c14_hvezdy.Mainx();
+            //c14_hvezdy.Mainx_varianta1();
+            //c14_hvezdy.Mainx_varianta2();
             //c15_nahodne_cisla.Mainx();
             //c16_cisla_za_sebou.Mainx();
             //c17_nahodne_hvezdicky.Mainx();
+            //c18_prvocisla.Mainx();
         }
     }
 }
