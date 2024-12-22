@@ -37,7 +37,7 @@ namespace A {
             dny = float.Parse(Console.ReadLine());
             Console.WriteLine("zadej pocet hodin:");
             hodiny = float.Parse(Console.ReadLine());
-            Console.WriteLine(($"celkem to je: {hodiny + dny * 24} h")); 
+            Console.WriteLine($"celkem to je: {hodiny + dny * 24} h"); 
         }
     }
 }

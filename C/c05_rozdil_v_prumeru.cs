@@ -57,9 +57,9 @@ namespace C {
         //for i = 1 To 20
         //  nah = Int(Rnd()* rozsah) + 10
         //  sum = sum + nah
-        //  s = s + Chr(10) + i) + " cislo je        " + nah)
+        //  s = s + \n + i) + " cislo je        " + nah)
         //Next
         //rozdil = sum / 20 - 30
-        //MsgBox s + Chr(10) + "jejich prumer se lisi o  " + rozdil) + "  od stredu intervalu"
+        //Console.WriteLine($"s + \n + "jejich prumer se lisi o  " + rozdil) + "  od stredu intervalu"
     }
 }

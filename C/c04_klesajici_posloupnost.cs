@@ -44,20 +44,20 @@ namespace C {
 
             //  s string
 
-            //  s = \"
+            //  s = "";
             //  for i = 8 To -8 Step -1
-            //    s = s + Chr(10) + i)
+            //    s = s + \n + i)
             //  Next
-            //  MsgBox s, , ("posloupnost 8 az -8")
+            //  Console.WriteLine($"s, , ("posloupnost 8 az -8")
 
             ////Varianta: vypište stejnou posloupnost, ale pouze každé druhé (sudé) číslo. (Nepoužívejte if.)
             //Sub main_reseni2()
             //  i int
             //  s string
 
-            //    s = \"
+            //    s = "";
             //    for i = 8 To -8 Step -2
-            //        s = s + Chr(10) + i)
+            //        s = s + \n + i)
             //    Next
             //    Console.WriteLine(s)
             //    }

@@ -94,7 +94,7 @@ namespace C {
             //  }
             //      s = s + nah) + ", "
             //Next
-            //MsgBox s + Chr(10) + vIntervalu + Chr(10) + "Tedy v intervalu 10..50 bylo celkem " + pocetVIntervalu) + " čísel"
+            //Console.WriteLine($"s + \n + vIntervalu + \n + "Tedy v intervalu 10..50 bylo celkem " + pocetVIntervalu) + " čísel"
 
             //      }
 
@@ -106,12 +106,12 @@ namespace C {
             //
             //    min = -90
             //    max = 100
-            //    nahodneCislo = \"
+            //    nahodneCislo = "";
             //
             //    for i = 1 To 20
-            //        nahodneCislo = nahodneCislo + "Index:" + i) + Chr(10) + "Náhodné číslo: " + Int(Rnd() * (max - min + 1) + min)) + Chr(10)
+            //        nahodneCislo = nahodneCislo + "Index:" + i) + \n + "Náhodné číslo: " + Int(Rnd() * (max - min + 1) + min)) + \n
             //    Next i
-            //    MsgBox ("Hodnoty min:" + min) + Chr(10) + "Hodnoty max:" + max) + Chr(10) + "Vzorec: Int(Rnd() * (max - min + 1) + min))" + Chr(10) + Chr(10) + nahodneCislo)
+            //    Console.WriteLine($"("Hodnoty min:" + min) + \n + "Hodnoty max:" + max) + \n + "Vzorec: Int(Rnd() * (max - min + 1) + min))" + \n + \n + nahodneCislo)
             //
         }
     }
