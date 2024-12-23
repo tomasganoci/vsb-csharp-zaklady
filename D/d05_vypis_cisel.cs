@@ -12,6 +12,66 @@ namespace D {
 
     internal class d05_vypis_cisel {
 
+        public static void Mainx_reseni_b_do_while() {
+            //d05: Zadejte řadu celých čísel ukončenou nulou (která do řady již nepatří).
+            //Program v MsgBoxu vypíše daná čísla, jejich počet, součet, průměr, maximum.
+            //Případně ještě vypíše ta z nich, která jsou sudá a jejich počet.
+            //Případně ještě vypíše ta z nich, která jsou větší, než první číslo.
+
+            //tato varianta je elegantnější než předchozí, protože přesunem inputboxu na konec smyčky
+            //se zmenšilo množství příkazů, které se mají provést před smyčkou.
+            //Také se ušetřilo vyhodnocování podmínky if cislo != 0 ve smyčce, protože
+            //nyní se už číslo rovné nule ani do smyčky nedostane.
+            //Náročné na pochopení však může být to, že číslo se zadává při jednom
+            //průchodu smyčkou ale zpracovává se až při dalším.
+            long cislo, max, prvni;
+            string s, strSuda, vys;
+            byte pocet, pocetSudych;
+            double Prumer;
+
+            vys = "";
+            strSuda = "";
+            pocet = 0;
+            double suma = 0;
+            pocetSudych = 0;
+            s = "";
+            cislo = 0;
+            prvni = 0;
+            max = 0;
+
+            bool prvniPruchod = true;
+
+            do {
+                Console.WriteLine("Zadej celé číslo [0=konec]");
+                cislo = long.Parse(Console.ReadLine());
+                if (cislo != 0) {
+                    if (prvniPruchod) {
+                        max = cislo;
+                        prvni = cislo;
+                        prvniPruchod = false;
+                    }
+                    if (cislo > prvni) {
+                        vys += $"{cislo}, ";
+                    }
+                    if (cislo > max) {
+                        max = cislo;
+                    }
+                    if (cislo % 2 == 0) {
+                        strSuda += $"{cislo}, ";
+                        pocetSudych++;
+                    }
+                    s += $"{cislo}, ";
+                    pocet++;
+                    suma += cislo; 
+                }
+            } while (cislo != 0);
+
+            if (pocet != 0) {
+                Prumer = Math.Round(suma / pocet, 2);
+                Console.WriteLine($"Zadaná čísla: {s}\nPočet: {pocet}\nSoučet: {suma}\nPrůměr: {Prumer}\nMax: {max}\n{pocetSudych} sudých čísel:  {strSuda}\nVetsi nez {prvni} jsou: {vys}");
+            }
+        }
+
         public static void Mainx() {
             //5) Zadejte několik celých čísel, ukončete nulou (ta již do dat nepatří).
             //Program v MsgBoxu vypíše daná čísla, jejich počet, součet, průměr, minimum, maximum.
@@ -192,7 +252,7 @@ namespace D {
             }
             if (pocet != 0) {
                 Prumer = Math.Round(suma / pocet, 2);
-                Console.WriteLine($"Zadaná čísla: {s}\nPočet: {pocet}\nSoučet: {suma}\nPrůměr: {Prumer}\nMax: {max})\n{pocetSudych} sudých čísel:  {strSuda}\nVetsi nez {prvni} jsou: {vys}");
+                Console.WriteLine($"Zadaná čísla: {s}\nPočet: {pocet}\nSoučet: {suma}\nPrůměr: {Prumer}\nMax: {max}\n{pocetSudych} sudých čísel: {strSuda}\nVetsi nez {prvni} jsou: {vys}");
             }
         }
     }

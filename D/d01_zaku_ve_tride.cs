@@ -10,6 +10,38 @@ using Microsoft.VisualBasic.FileIO;
 namespace D {
 
     internal class d01_zaku_ve_tride {
+        public static void Mainx_reseni_do_while() {
+            //Řešení:
+            //d01: Zadejte postupně, kolik je v každé třídě žáků (0=konec).
+            //Program spočítá, kolik je žáků v celé škole a průměrný počet žáků ve třídě.
+            //Ověřte, že nula do platných dat nepatří.
+            //Nesmí se tedy stát, že při zadání 30 a 0 (tedy jen jedna třída a to s 30 žáky)
+            //vyjde průměrný počet žáků 15 (omylem se uvažovaly dvě třídy, jedna má 30 a druhá 0 žáků)
+
+            byte pocetTrid, pocetZaku;
+            int suma;
+            float Prumer;
+
+            pocetTrid = 0;
+            pocetZaku = 0;
+            suma = 0;
+
+            Console.WriteLine($"Zadej pocet zaku ve tride[0 = konec]");
+            pocetZaku = byte.Parse(Console.ReadLine());
+            while (pocetZaku > 0) {
+                suma += pocetZaku;
+                pocetTrid++;
+                Console.WriteLine($"Zadej pocet zaku ve tride[0 = konec]");
+                pocetZaku = byte.Parse(Console.ReadLine());
+            }
+            if (suma == 0) {
+                Console.WriteLine("Škola je prádná.");
+            }
+            else {
+                Prumer = suma / (pocetTrid - 1);
+                Console.WriteLine($"Celkem {suma} žáků na škole\nPrůměrně {Prumer} žáků ve třídách");
+            }
+        }
 
         public static void Mainx() {
             //1) Zadejte postupně, kolik je v každé třídě žáků (0=konec).

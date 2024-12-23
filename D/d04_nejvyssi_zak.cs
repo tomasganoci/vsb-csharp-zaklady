@@ -10,6 +10,55 @@ namespace D {
 
     internal class d04_nejvyssi_zak {
 
+        public static void Mainx_reseni_do_while() {
+            //Řešení:
+
+            //d04: Varianta na B5: Program postupně čte nejprve jméno a pak výšku žáka.
+            //Prázdné jméno načítání ukončuje. Poté zobrazí jméno a výšku nejvyššího žáka.
+            //------ když nejvyšší jsou 2 a více, tak stačí, když napíše jen jednoho -------
+
+            string jmeno, jmenoMax;
+            byte vyska, vyskaMax;
+            bool zadanAsponJedenZak;
+
+            vyskaMax = 0;
+            bool prvniPruchod = true;
+            jmenoMax = "";
+            vyska = 0;
+            do {
+                Console.WriteLine("Zadej jméno žáka:");
+                jmeno = Console.ReadLine();
+                if (jmeno == "") {
+                    zadanAsponJedenZak = false;
+                }
+                else {
+                    zadanAsponJedenZak = true;
+                }
+                if (jmeno != "") {
+                    Console.WriteLine("Zadej výšku žáka [cm]:");
+                    vyska = byte.Parse(Console.ReadLine());
+
+                    if (prvniPruchod == true) {
+                        jmenoMax = jmeno;
+                        vyskaMax = vyska;
+                        prvniPruchod = false;
+                    }
+                    if (vyska > vyskaMax) {
+                        vyskaMax = vyska;
+                        jmenoMax = jmeno;
+                    }
+                }
+            }
+            while (jmeno != "");
+
+            if (zadanAsponJedenZak == true) {
+                Console.WriteLine($"Nejvyšší je {jmenoMax} s výškou {vyskaMax} cm");
+            }
+            else {
+                Console.WriteLine("Nebyl zadán žádný žák");
+            }
+        }
+
         public static void Mainx() {
             //4) Varianta na b5): Program postupně čte nejprve jméno a pak výšku žáka. Prázdné jméno načítání ukončuje.
             //Poté zobrazí jméno a výšku nejvyššího žáka. Když jsou nejvyšší dva a více stejně vysocí, napíše jen jednoho.

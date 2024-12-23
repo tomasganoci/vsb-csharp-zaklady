@@ -11,6 +11,30 @@ namespace D {
 
     internal class d07_hod_kostkou_s_cilem {
 
+        public static void Mainx_reseni_do_while() {
+            //Řešení:
+
+            //d07: Program hází kostkou tak dlouho, dokud nepadne šestka.
+            //Potom vypíše, kolik hodů bylo potřeba.
+
+            float nah;
+            byte i;
+            string s;
+
+            i = 0;
+            s = "";
+            Random random = new Random();
+            nah = 0;
+            nah = (int)(random.NextDouble() * 6) + 1;
+            while (nah != 6) {
+                s += $"{nah}, ";
+                i++;
+                nah = (int)(random.NextDouble() * 6) + 1;
+            }
+            
+            Console.WriteLine($"{s}\nŠestka padla na {i} pokus");
+        }
+
         public static void Mainx() {
             //7) Program hází kostkou tak dlouho, dokud nepadne šestka. Potom vypíše, kolik hodů bylo potřeba.
             //Moje poznámky: skoro stejné, až na vzorec hodu kostkou

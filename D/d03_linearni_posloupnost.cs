@@ -10,6 +10,36 @@ namespace D {
 
     internal class d03_linearni_posloupnost {
 
+        public static void Mainx_reseni_do_while() {
+            //Řešení:
+
+            //d03: Zadejte první, druhy a poslední člen lineární celočíselné posloupnosti.
+            //Program vytiskne pod sebou všechny prvky posloupnosti.
+
+            int prvni, druhy, posledni, rozdil, dalsiCislo;
+            string s;
+
+            Console.WriteLine("Zadej 1 cislo posloupnosti");
+            prvni = int.Parse(Console.ReadLine());
+            Console.WriteLine("Zadej 2 cislo posloupnosti");
+            druhy = int.Parse(Console.ReadLine());
+            Console.WriteLine("Zadej posledni cislo posloupnosti");
+            posledni = int.Parse(Console.ReadLine());
+            rozdil = druhy - prvni;
+            dalsiCislo = druhy;
+            s = $"{prvni}\n{druhy}\n";
+            do {
+                dalsiCislo += rozdil;
+                s += $"{dalsiCislo}\n";
+            }
+            while ((dalsiCislo + rozdil) <= posledni);
+
+            if (dalsiCislo != posledni) {
+                s = $"Koncové číslo {posledni} neni součástí linearni posloupnosti\n";
+            }
+            Console.WriteLine($"{s}Lineární řada čísel {prvni}, {druhy} ..{posledni}");
+        }
+
         public static void Mainx() {
             //3) Zadejte první, druhy a poslední člen lineární celočíselné posloupnosti (lineární posloupnost je taková, kde mezi jednotlivými členy jsou stejné odstupy, např. 12, 15, 18, 21...).
             //Program zobrazí pod sebou všechny prvky posloupnosti.

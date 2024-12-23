@@ -10,6 +10,33 @@ namespace D {
 
     internal class d02_uctenky {
 
+        public static void Mainx_reseni_do_while() {
+            //Řešeni:
+
+            //d02: Máte schované účtenky z různých nákupů, nevíte ale, kolik účtenek je.
+            //Proto částky na účtenkách budete zadávat postupně, jako poslední zadáte nulu.
+            //Program spočítá, kolik jste utratili a zároveň oznámí, kolik nákupů přesáhlo částku 100 Kč.
+
+            float castka, suma;
+            byte pocet100;
+
+            suma = 0;
+            pocet100 = 0;
+            castka = 0;
+
+            Console.WriteLine("Zadej částku na účtence(Kč)[0 = konec]");
+            castka = float.Parse(Console.ReadLine());
+            while (castka > 0) {
+                suma += castka;
+                if (castka > 100) {
+                    pocet100++;
+                }
+                Console.WriteLine("Zadej částku na účtence(Kč)[0 = konec]");
+                castka = float.Parse(Console.ReadLine());
+            }
+            Console.WriteLine($"Celkem utraceno {suma} kc\n{pocet100}x nákup větší než 100 Kč");
+        }
+
         public static void Mainx() {
             //2) Máte schované účtenky z různých nákupů, nevíte ale, kolik účtenek je. Proto částky na účtenkách budete zadávat postupně, jako poslední zadáte nulu.
             //Program spočítá, kolik jste utratili a zároveň oznámí, kolik nákupů přesáhlo částku 100 Kč.

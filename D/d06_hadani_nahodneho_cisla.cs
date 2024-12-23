@@ -8,6 +8,27 @@ using Microsoft.VisualBasic.FileIO;
 namespace D {
 
     internal class d06_hadani_nahodneho_cisla {
+        public static void Mainx_reseni_do_while() {
+            //Řešení:
+
+            //d06: Program Doc. Homoly: Sestavte program, který si myslí (náhodně vygeneruje) celé číslo z intervalu <1,10>.
+            //Pak ho vy hádáte (zadáváte z klávesnice), dokud se nestrefíte. Počítač vypíše, na který pokus se to podařilo.
+
+            byte nah, hadam, i;
+            hadam = 0;
+
+            i = 0;
+            Random random = new Random();
+            nah = Convert.ToByte(random.NextDouble() * 10 + 1);
+            do {
+                Console.WriteLine("Hádej číslo [1-10]");
+                hadam = byte.Parse(Console.ReadLine());
+                i++;
+            }
+            while (nah != hadam);
+            Console.WriteLine($"číslo {nah} bylo uhádnuto na {i}.pokus");
+        }
+
 
         public static void Mainx() {
             //6) Upraveno podle Doc. Homoly: Sestavte program, který si myslí (náhodně vygeneruje) celé číslo z intervalu <1,10>.

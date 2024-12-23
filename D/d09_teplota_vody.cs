@@ -11,6 +11,52 @@ namespace D {
 
     internal class d09_teplota_vody {
 
+        public static void Mainx_reseni_do_while() {
+            //Řešení:
+
+            //d09) Uživatel bude zadávat postupně teploty s přesností na desetinu stupně.
+            //Zadávání ukončí zadáním teploty přesahující 100°
+            //(tato teplota je ale také součástí dat!). Program zobrazí zadané teploty, minimální teplotu
+            //a kolikátá v pořadí tato teplota byla. A také průměr teplot
+            float teplota, minT, sum;
+            byte i, poradi;
+            string s;
+
+            poradi = 0;
+            i = 0;
+            sum = 0;
+            s = "";
+            minT = 0;
+            teplota = 0;
+
+            Console.WriteLine("Zadej teplotu s přesností na desetinu stupně, teplota vetsi nez 100 zadavani ukonci");
+            teplota = float.Parse(Console.ReadLine());
+            if (i == 0) {
+                minT = teplota;      //lepší by bylo inicializovat minimum před smyčkou
+                poradi = 1;
+            }
+            s += $"\n{teplota}";
+            i++;
+            sum += teplota;
+            while (teplota < 100) {
+                //if teplota <= 100 {             //toto ne, protože i tentokrát poslední hodnota patří do platných dat                
+                Console.WriteLine("Zadej teplotu s přesností na desetinu stupně, teplota vetsi nez 100 zadavani ukonci");
+                teplota = float.Parse(Console.ReadLine());
+                s += $"\n{teplota}";
+                i++;
+                sum += teplota;
+                if (teplota < minT) {
+                    minT = teplota;
+                    poradi = i;
+                }
+            }
+            //}
+            //nebo }  while ( teplota <= 100
+
+            s = $"Zadané teploty: {s}\nNejnižší je {minT}° a je {poradi} v pořadí.";
+            Console.WriteLine($"{s}\nprůměrná teplota: {Math.Round(sum / i, 1)}");
+        }
+
         public static void Mainx() {
             //9) Uživatel bude zadávat postupně teploty vody s přesností na desetinu stupně.
             //Zadávání ukončí zadáním teploty přesahující 100° (tato teplota je ale také součástí dat!).
