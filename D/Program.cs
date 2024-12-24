@@ -19,7 +19,7 @@
             //d06_hadani_nahodneho_cisla.Mainx();
             //d06_hadani_nahodneho_cisla.Mainx_reseni();
             //d07_hod_kostkou_s_cilem.Mainx();
-            ////d07_hod_kostkou_s_cilem.Mainx_reseni();
+            //d07_hod_kostkou_s_cilem.Mainx_reseni();
             //d08_zadavani_ascii_znaku.Mainx();
             //d08_zadavani_ascii_znaku.Mainx_reseni();
             //d08_zadavani_ascii_znaku.Mainx_reseni_b();
@@ -34,6 +34,7 @@
             //d05_vypis_cisel.Mainx_reseni_b_do_while();
             //d06_hadani_nahodneho_cisla.Mainx_reseni_do_while();
             //d07_hod_kostkou_s_cilem.Mainx_reseni_do_while() ;
+            //d08_zadavani_ascii_znaku.Mainx_reseni_do_while();
             //d09_teplota_vody.Mainx_reseni_do_while();
         }
     }

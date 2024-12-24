@@ -10,6 +10,38 @@ namespace D {
 
     internal class d08_zadavani_ascii_znaku {
 
+        public static void Mainx_reseni_do_while() {
+            //Řešení:
+
+            //d08: Varianta příkladu ze skupiny b: Uživatel opakovaně zadá znak, program vždy odpoví, zda se jedná o písmeno,
+            //číslici nebo jiný znak. Zadávání končí zadáním prázdného znaku (tedy jen ENTER). Řešte pomocí } else { if.
+
+            char znak;  //ve Visual studiu by se použil typ Char
+            string zadanyZnak = "";
+
+            Console.WriteLine("Zadej znak:", "Druh znaku [číslo,písmeno,jiný]");
+            zadanyZnak = Console.ReadLine();
+
+            while (zadanyZnak.Length != 0) {
+                znak = Convert.ToChar(zadanyZnak);
+                if (znak >= 97 && znak <= 122) {   //druhá možnost
+                                                   //if znak >= "a"  && znak <= "z" {
+                    Console.WriteLine("znak je malé písmeno");
+                }
+                else if (znak >= 'A' && znak <= 'Z') {
+                    Console.WriteLine("znak je velké písmeno");
+                }
+                else if (znak >= '0' && znak <= '9') {
+                    Console.WriteLine("znak je číslo");
+                }
+                else {
+                    Console.WriteLine("znak není písmeno ani číslo");
+                }
+                Console.WriteLine("Zadej znak:", "Druh znaku [číslo,písmeno,jiný]");
+                zadanyZnak = Console.ReadLine();
+            }
+        }
+
         public static void Mainx() {
             //8) Varianta příkladu ze skupiny b: Uživatel opakovaně zadá znak, program vždy odpoví, zda se jedná o písmeno, číslici nebo jiný znak.
             //Zadávání končí zadáním např. nuly (nebo to pro změnu zkuste ukončit nějakým jiným znakem).
@@ -51,27 +83,30 @@ namespace D {
             //číslici nebo jiný znak. Zadávání končí zadáním prázdného znaku (tedy jen ENTER). Řešte pomocí } else { if.
 
             char znak;  //ve Visual studiu by se použil typ Char
-
+            string zadanyZnak = "";
             do {
                 Console.WriteLine("Zadej znak:", "Druh znaku [číslo,písmeno,jiný]");
-                znak = Convert.ToChar(Console.ReadLine());
-                if (znak != null) {
-                    if (znak >= 97 && znak <= 122) {   //druhá možnost
+                zadanyZnak = Console.ReadLine();
+                if (zadanyZnak.Length != 0) {
+                    znak = Convert.ToChar(zadanyZnak);
+                    if (znak != null) {
+                        if (znak >= 97 && znak <= 122) {   //druhá možnost
                                                            //if znak >= "a"  && znak <= "z" {
-                        Console.WriteLine("znak je malé písmeno");
-                    }
-                    else if (znak >= 'A' && znak <= 'Z') {
-                        Console.WriteLine("znak je velké písmeno");
-                    }
-                    else if (znak >= '0' && znak <= '9') {
-                        Console.WriteLine("znak je číslo");
-                    }
-                    else {
-                        Console.WriteLine("znak není písmeno ani číslo");
+                            Console.WriteLine("znak je malé písmeno");
+                        }
+                        else if (znak >= 'A' && znak <= 'Z') {
+                            Console.WriteLine("znak je velké písmeno");
+                        }
+                        else if (znak >= '0' && znak <= '9') {
+                            Console.WriteLine("znak je číslo");
+                        }
+                        else {
+                            Console.WriteLine("znak není písmeno ani číslo");
+                        }
                     }
                 }
             }
-            while (znak != null);
+            while (zadanyZnak.Length != 0);
         }
 
         public static void Mainx_reseni_b() {
@@ -100,9 +135,8 @@ namespace D {
                 }
                 if (znak != null) {
                     Console.WriteLine($"{s}");
-                }while (znak != null);
+                } while (znak != null) ;
             } while (znak != null);
-
         }
     }
 }
