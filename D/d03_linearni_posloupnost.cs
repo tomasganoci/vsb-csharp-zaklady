@@ -124,7 +124,7 @@ namespace D {
 
                 s += $"{dalsiCislo}\n";
 
-                i = i + 1;
+                i++;
             } while (i < pocetCisel);
 
             Console.WriteLine($"Lineární řada pro {pocetCisel} cisel začínajících na {prvni}, {druhy} je:\n{s}");

@@ -126,7 +126,7 @@ namespace D {
                         }
                     }
                 }
-                i = i + 1;
+                i++;
             }
             while (zadaneCislo != 0);
 
