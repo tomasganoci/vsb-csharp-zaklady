@@ -8,73 +8,71 @@ using Microsoft.VisualBasic.FileIO;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace E {
+
     internal class e07_poradi_slova {
-        
+        ////7) Zadejte postupně do pole několik různých slov.
+        ////Každé slovo přitom budete zadávat zvlášť.
+        ////Poté znovu zadejte jedno z těchto slov.
+        ////Program vypíše číslo pořadí, v jakém bylo toto slovo zadáno (na jaké pozici se vyskytuje v poli).
+        ////Moje poznámky: posledniIndex dát za smyčku, dal do smyčky podmínku s prázným polem... je to takto lepší?,
 
-//7) Zadejte postupně do pole několik různých slov.
-//Každé slovo přitom budete zadávat zvlášť.
-//Poté znovu zadejte jedno z těchto slov.
-//Program vypíše číslo pořadí, v jakém bylo toto slovo zadáno (na jaké pozici se vyskytuje v poli).
-//Moje poznámky: posledniIndex dát za smyčku, dal do smyčky podmínku s prázným polem... je to takto lepší?,
+        //    slovaPole(1 To 100), zadaneSlovo, vysledneSlovo string
+        //    i, pocetSlov, posledniIndex byte
 
+        //    i = 1
+        //    do {
+        //        zadaneSlovo = Console.ReadLine();Console.WriteLine("Zadejte slovo. Ukončíte tlačítkem \"cancel\"")
+        //        slovaPole[i] = zadaneSlovo
+        //        posledniIndex = i - 1
+        //        i++;
+        //        pocetSlov = pocetSlov + 1
+        //    }  while ( zadaneSlovo!= \"
 
-    slovaPole(1 To 100) string, zadaneSlovo string, vysledneSlovo string
-    i byte, pocetSlov byte, posledniIndex byte
+        //    vysledneSlovo = Console.ReadLine();Console.WriteLine("Zadejte slovo, které mám vyhledat")
 
-    i = 1
-    Do
-        zadaneSlovo = Console.WriteLine(Zadejte slovo. Ukončíte tlačítkem \"cancel\"")
-        slovaPole(i) = zadaneSlovo
-        posledniIndex = i - 1
-        i = i + 1
-        pocetSlov = pocetSlov + 1
-    Loop While zadaneSlovo<> \"
-    
-    vysledneSlovo = Console.WriteLine(Zadejte slovo, které mám vyhledat")
+        //    for i = 1 To pocetSlov
+        //        if slovaPole[i] = vysledneSlovo {
+        //            Console.WriteLine("Slovo:  slovaPole[i]\n
+        //                    "Pořadí:  i)\n)
+        //        }
+        //    Next
+        public static void Mainx() {
+            //Řešení:
+            //e7: Zadejte postupně do pole několik slov. Každé slovo přitom budete zadávat zvlášť. Poté znovu zadejte jedno z těchto slov.
+            //Program vypíše číslo pořadí, v jakém bylo toto slovo zadáno (na jaké pozici se vyskytuje v poli).
+            string[] poleSlov = new string[101];
+            string zadaneSlovo, s, znovu;
+            int i, poradi, poslIndex; //poslIndex: index poslední buňky pole s platným číslem
+            i = 0;
+            s = "";
+            poradi = 0;
 
+            do {
+                Console.WriteLine("Zadej slovo, zadavani ukoncis prázdným ENTERem");
+                zadaneSlovo = Console.ReadLine();
+                if (zadaneSlovo != "") {
+                    s += $"\n{zadaneSlovo}";
+                    poleSlov[i] = zadaneSlovo;
+                    i++;
+                }
+            }
+            while (zadaneSlovo != "");
+            poslIndex = i;   //Tím se kompenzuje i++; za posledním číslerm
 
-    for i = 1 To pocetSlov
-        if slovaPole(i) = vysledneSlovo {
-            Console.WriteLine("Slovo: " + slovaPole(i) + Chr(10) + 
-                    "Pořadí: " + i) + Chr(10))
+            Console.WriteLine("Zadej znovu jedno ze zadanych slov");
+            znovu = Console.ReadLine();
+            for (i = 0; i < poslIndex; i++) {
+                if (znovu == poleSlov[i]) {
+                    poradi = i + 1;
+                }
+            }
+
+            if (poradi == 0) {
+                Console.WriteLine("zadané slovo v sadě není");
+            }
+            else {
+                Console.WriteLine($"Zadana slova:\n{s}\nSlovo {znovu} bylo zadano jako {poradi} v poradi");
+            }
         }
-    Next
-
-
-//Řešení:
-//e7: Zadejte postupně do pole několik slov. Každé slovo přitom budete zadávat zvlášť. Poté znovu zadejte jedno z těchto slov.
-//Program vypíše číslo pořadí, v jakém bylo toto slovo zadáno (na jaké pozici se vyskytuje v poli).
-main_reseni()
-    poleSlov(100) string
-    zadaneSlovo string, s string, znovu string
-    i int, poradi int, poslIndex int  //poslIndex: index poslední buňky pole s platným číslem
-    i = 0: s = \": poradi = 0
-    
-    Do
-        zadaneSlovo = Console.WriteLine(Zadej slovo, zadavani ukoncis prázdným ENTERem")
-        if zadaneSlovo<> \" {
-            s = s + Chr(10) + zadaneSlovo
-            poleSlov(i) = zadaneSlovo
-            i = i + 1
-        }
-    Loop Until zadaneSlovo = \"
-    poslIndex = i - 1   //Tím se kompenzuje i = i + 1 za posledním číslerm
-
-
-    znovu = Console.WriteLine(Zadej znovu jedno ze zadanych slov")
-    for i = 0 To poslIndex
-        if znovu = poleSlov(i) {
-        poradi = i + 1
-        }
-    Next
-
-    if poradi = 0 {
-        Console.WriteLine("zadané slovo v sadě není"
-    } else {
-        Console.WriteLine("Zadana slova:" + Chr(10) + s + Chr(10) + "Slovo " + znovu + " bylo zadano jako " + poradi) + ". v poradi"
-    }
-
-
-
     }
 }
