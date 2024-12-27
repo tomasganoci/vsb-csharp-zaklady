@@ -14,7 +14,8 @@
             //e05_vypocty_pole.Mainx();
             //e06_generator_pismen.Mainx();
             //e07_poradi_slova.Mainx();
-            e08_prace_se_slovy.Mainx();
+            //e08_prace_se_slovy.Mainx();
+            e10_dvourozmerne_pole.Mainx();
         }
     }
 }

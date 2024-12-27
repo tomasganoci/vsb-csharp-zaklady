@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="e09_!.cs" />
+    <Compile Remove="e09_!nevypracovat.cs" />
+  </ItemGroup>
+
 </Project>
