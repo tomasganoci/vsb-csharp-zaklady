@@ -15,7 +15,13 @@
             //e06_generator_pismen.Mainx();
             //e07_poradi_slova.Mainx();
             //e08_prace_se_slovy.Mainx();
-            e10_dvourozmerne_pole.Mainx();
+            //e10_matice_radky.Mainx();
+            //e11_matice_sloupec.Mainx();
+            //e12_sousedici_nizsi_hodnoty.Mainx();
+            //e13_posloupnost_nelinearnich.Mainx();
+            //e13_posloupnost_nelinearnich.Mainx_b();
+            //e14_serazeni_cisel_bubble.Mainx();
+            e15_morseovka.Mainx();
         }
     }
 }
