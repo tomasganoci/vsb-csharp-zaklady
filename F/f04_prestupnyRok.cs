@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +53,14 @@ namespace F {
                     $"Přestupný: {jePrestupny}\n" +
 
                     $"Počet dní: {prestupnyRokModifikace(zadanyRok)}");
+        }
+        public static void Mainx_tezsi() {
+//            4) Napište funkci(a pak předělejte na subrutinu), které se předá rok(čtyřciferný) a která vrací logickou hodnotu "True", pokud je rok přestupný(přepracujte z Juliánského kalendáře z BasicCv.doc na Gregoriánský).
+//            Řešte dvěma způsoby: dvěma podmínkami(či if-else) i jednou složenou podmínkou.
+//            Potřebná teorie: Podle gregoriánského kalendáře jsou přestupné roky ty, které jsou dělitelné čtyřmi.
+//            Ale roky dělitelné stem jsou přestupné jenom tehdy, jsou-li dělitelné také 400.
+//            Přestupnými roky jsou proto například roky 1600, 2000, 2400 apod., zatímco roky 1700, 1800, 1900, 2100 atd.přestupné nejsou. (zdroj: wikipedia)
+
         }
     }
 }
