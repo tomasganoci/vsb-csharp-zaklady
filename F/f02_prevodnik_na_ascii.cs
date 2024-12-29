@@ -10,52 +10,48 @@ using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace F {
+
     internal class f02_prevodnik_na_ascii {
-        
+        ////2)  Napište funkci, které se zadá znak a která vrátí jeho ASCII hodnotu.  (příliš lehké)
+        ////Moje poznámky: skoro stejné, druhá možnost mi příjde asi více náročnější na proce.
 
-//2)  Napište funkci, které se zadá znak a která vrátí jeho ASCII hodnotu.  (příliš lehké)
-//Moje poznámky: skoro stejné, druhá možnost mi příjde asi více náročnější na proce.
+        //    zadanyZnak string
 
-    zadanyZnak string
+        //    zadanyZnak = Console.ReadLine();Console.WriteLine("Zadejte znak a já ti vypíšu jeho ASCII hodnotu")
+        //    Console.WriteLine("Zadaný znak: zadanyZnak\n
+        //            "ASCII hodnota: vratASCII(zadanyZnak)))
 
+        //Function vratASCII(ascii string) byte
+        //    vratASCII =c(ascii)
+        //End Function
 
-    zadanyZnak = Console.WriteLine(Zadejte znak a já ti vypíšu jeho ASCII hodnotu")
-    Console.WriteLine("Zadaný znak:" + zadanyZnak + Chr(10) + 
-            "ASCII hodnota:" + vratASCII(zadanyZnak)))
+        //Řešení:
+        //f02) Napište funkci, které se zadá znak a která vrátí jeho ASCII hodnotu.
+        public static void Mainx() {
+            char znak;
+            byte ascii;
+            Console.WriteLine("Zadej znak!");
+            znak = char.Parse(Console.ReadLine());
+            ascii = asciiHodnota(znak);
+            Console.WriteLine($"ASCII hodnota zadaneho znaku {znak} je {ascii}");
 
+            ascii = asciiHodnota2(znak);
+            Console.WriteLine($"ASCII hodnota zadaneho znaku {znak} je {ascii}");
 
-Function vratASCII(ascii string) byte
-    vratASCII =c(ascii)
-End Function
+            static byte asciiHodnota(char zadanyZnak) {
+                return Convert.ToByte(zadanyZnak);
+            }
 
-//Řešení:
-//f02) Napište funkci, které se zadá znak a která vrátí jeho ASCII hodnotu.
-
-main_reseni()
-    znak string, ascii byte
-    znak = Console.WriteLine(Zadej znak!")
-    ascii =ciiHodnota(znak)
-    Console.WriteLine("ASCII hodnota zadaneho znaku " + znak + " je " + ascii), vbInformation
-
-    ascii =ciiHodnota2(znak)
-    Console.WriteLine("ASCII hodnota zadaneho znaku " + znak + " je " + ascii), vbInformation
-
-
-FunctionciiHodnota(zadanyZnak string) byte
-   ciiHodnota =c(zadanyZnak)
-End Function
-//Druhá možnost: kdybychom se chtěli vyhnout hotové funkcic
-FunctionciiHodnota2(zadanyZnak string) byte
-    i byte
-    for i = 32 To 254
-        if Chr(i) = zadanyZnak {
-           ciiHodnota2 = i
-            Exit for  //ukončuje smyčku, neboť se nemusí už dál kontrolovat
+            //Druhá možnost: kdybychom se chtěli vyhnout hotové funkcic
+            static byte asciiHodnota2(char zadanyZnak) {
+                byte i;
+                for (i = 32; i < 254; i++) {
+                    if (i == Convert.ToChar(zadanyZnak)) {
+                        return i;
+                    }
+                }
+                return 0;
+            }
         }
-    Next
-End Function
-
-
-
     }
 }
