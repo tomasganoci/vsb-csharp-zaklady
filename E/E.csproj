@@ -10,6 +10,7 @@
   <ItemGroup>
     <Compile Remove="e09_!.cs" />
     <Compile Remove="e09_!nevypracovat.cs" />
+    <Compile Remove="e16_!.cs" />
   </ItemGroup>
 
 </Project>
