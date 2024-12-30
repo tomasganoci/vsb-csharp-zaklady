@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace F {
 
-    internal class f13_ {
+    internal class f13_otazka {
 
         public static void Mainx() {
             //            13) Zjistěte, proč ve Visual Studiu dává tento program i u subrutiny správný součet:
+            //Moje odpověď: protože subrutina sectiS je sice volaná... ale už není nikde použita... divím se, že to nevyhazuje chybu... předám jí 3 parametry, ale už nemá návratovou hodnotu.
             //Sub main()
             //    Dim soucet As Byte
             //    soucet = sectiF(3, 4)
@@ -26,6 +27,22 @@ namespace F {
             //Sub sectiS(a As Byte, b As Byte, vys As Byte)
             //    vys = a + b + 5
             //End Sub
+            byte soucet = 0;
+            string ret = "";
+            soucet = sectiF(3, 4);
+            ret = ret + "\n" + "Soucet podle funkce je " + soucet;
+            sectiS(3, 4, soucet);
+            ret = ret + "\n" + "Soucet  podle subrutiny je " + soucet;
+            Console.WriteLine(ret);
+
+            static byte sectiF(byte a, byte b) {
+                return (byte)(a + b);
+            }
+        }
+
+        public static byte sectiS(byte a, byte b, byte vys) {
+            vys = (byte)(a + b + 5);
+            return vys;
         }
     }
 }
