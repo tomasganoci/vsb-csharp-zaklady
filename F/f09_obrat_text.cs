@@ -7,13 +7,25 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace F {
 
-    internal class f09_ {
+    internal class f09_obrat_text {
 
         public static void Mainx() {
             //Složité programy Doc.Homoly:
             //9) Sestavte funkci ObratText s jedním parametrem -textovým řetězcem.
             //Výsledkem volání funkce je tentýž textový řetězec, ale má znaky v obráceném pořadí.
             //Funkci ověřte na zadání: sestavte program, který načte textový řetězec a zobrazí ho v obráceném pořadí znaků.
+
+            static string ObratText(string text) {
+                string vysledek = "";
+                for (int i = text.Length-1; i >= 0; i--) {
+                    vysledek += text.Substring(i, 1);
+                }
+                return vysledek;
+            }
+            string zadanyText = "";
+            Console.WriteLine("Zadejte text a já ti ho otočím");
+            zadanyText = Console.ReadLine();
+            Console.WriteLine($"Zadaný text {zadanyText} a obrácený je {ObratText(zadanyText)}");
         }
     }
 }
