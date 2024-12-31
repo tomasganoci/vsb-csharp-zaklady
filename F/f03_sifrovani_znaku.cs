@@ -15,7 +15,7 @@ namespace F {
         ////Tedy znak, jehož pozice v ASCII tabulce je o jedno vyšší S jedinou výjimkou: pro "z" vrátí "a".
         ////Poté program zdokonalte tak, aby se funkci předalo i číslo n a funkce pak v ASCII tabulce posouvá o n pozic.
         ////Tedy například pro n=2 převede: a->c, y->a, z->b
-        ////Moje poznámky: Celý tento příklad byl pro mě složitější. Řešení od učitele je snadnější. Taky mě mohlo nadanout, posunutí zpět řady při "z". Ten "%" by mě nenapadl...
+        ////Moje poznámky: Celý tento příklad byl pro mě složitější. Řešení od učitele je snadnější. Taky mě mohlo nadanout, posunutí zpět řady při "z". Ten "%" by mě nenapadl.... Ten % funguje stejně jen s malými písmeny.
 
         //    zadanaHodnota string
 
