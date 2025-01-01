@@ -17,7 +17,7 @@ namespace F2 {
 
                 for (int i = 0; i < pole.Length; i++) {
                     if (i == 1) {
-                        aritmeticka =  pole[i]- posledniCislo;
+                        aritmeticka = pole[i] - posledniCislo;
                     }
                     if (aritmeticka != pole[i] - posledniCislo & i > 1) {
                         return false;
@@ -45,6 +45,34 @@ namespace F2 {
             Array.Copy(zadanaCisla, naplneneCisla, pocetPruchodu);
             jeVzestupne = KontrolaVzestupu(naplneneCisla);
             Console.WriteLine($"Tvoří zadaná čísla tvoří lineární aritmetickou posloupnost: {jeVzestupne}");
+        }
+
+        public static void Mainx_reseni() {
+            int[] pole = new int[1];
+            int cislo = 0, n = 0;
+            bool mF = false;
+            Console.WriteLine("Zadej pole cisel,ukoncis nulou");
+            do {
+                int.TryParse(Console.ReadLine(), out cislo);
+                if (cislo != 0) {
+                    pole[n++] = cislo;
+                    Array.Resize(ref pole, n + 1);
+                }
+            }
+            while (cislo != 0);
+            mF = aritpos(pole);
+            if (mF == true) Console.WriteLine("posloupnost je aritmeticka");
+            else Console.WriteLine("posloupnost neni aritmeticka");
+        }
+
+        private static bool aritpos(int[] poleF) {
+            bool yes = false;
+            int mez = poleF[1] - poleF[0];
+            for (int i = 1; i < poleF.Length; i++) {
+                if (mez == poleF[i + 1] - poleF[i] && mez != 0) yes = true;
+                else break;
+            }
+            return yes;
         }
     }
 }

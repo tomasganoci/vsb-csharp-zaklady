@@ -27,5 +27,19 @@ namespace F {
             zadanyText = Console.ReadLine();
             Console.WriteLine($"Zadaný text {zadanyText} a obrácený je {ObratText(zadanyText)}");
         }
+        public static void Mainx_reseni(string[] args) {
+            Console.WriteLine("Zadejte slovo");
+            string text = Console.ReadLine();
+            Console.WriteLine("Obracene slovo je {0}", ObratText(text));
+        }
+        static string ObratText(string text1) {
+            string obrT = "", z;
+            for (int i = 0; i < text1.Length; i++) {
+
+                z = text1.Substring(i, 1);
+                obrT = z + obrT;
+            }
+            return obrT;
+        }
     }
 }

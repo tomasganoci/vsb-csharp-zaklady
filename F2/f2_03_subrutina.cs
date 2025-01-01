@@ -35,5 +35,26 @@ namespace F2 {
 
             TiskRadku(pocetZnaku, znak);
         }
+
+        public static void Mainx_reseni() {
+            int pocet;
+            Console.WriteLine("Zadej písmeno");
+            string pismeno = Console.ReadLine();
+            Console.WriteLine("zadej pocet");
+            int.TryParse(Console.ReadLine(), out pocet);
+            string[] polePismen = new string[pocet];
+            subrutina(pismeno, pocet, out polePismen);
+            for (int i = 0; i < polePismen.Length; i++) {
+                Console.Write(polePismen[i]);
+            }
+            Console.WriteLine();
+        }
+
+        private static void subrutina(string a, int b, out string[] poleP) {
+            poleP = new string[b];
+            for (int i = 0; i < b; i++) {
+                poleP[i] = a;
+            }
+        }
     }
 }

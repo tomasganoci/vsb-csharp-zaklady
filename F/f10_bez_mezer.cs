@@ -22,5 +22,25 @@ namespace F {
             zadanyText = Console.ReadLine();
             Console.WriteLine($"Tvoje věta: {zadanyText}\nVěta bez mezer: {BezMezer(zadanyText)}");
         }
+
+        public static void Mainx_reseni(string[] args) {
+            Console.WriteLine("Zadejte vetu");
+            string Veta = Console.ReadLine();
+            Console.WriteLine("{0}", BeZMEzer(Veta));
+            Console.WriteLine("{0}", bezMezer(Veta));
+        }
+
+        private static string BeZMEzer(string v) {
+            v = v.Replace(" ", "");
+            return v;
+        }
+
+        private static string bezMezer(string v) {
+            string vystup = "";
+            for (int i = 0; i < v.Length; i++) {
+                if (v[i] != ' ') vystup += v[i];
+            }
+            return vystup;
+        }
     }
 }

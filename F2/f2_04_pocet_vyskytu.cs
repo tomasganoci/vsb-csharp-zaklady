@@ -27,12 +27,34 @@ namespace F2 {
             int hledat = 0;
             Random rnd = new Random();
             for (int i = 0; i < pole.Length; i++) {
-                pole[i] = rnd.Next(1,51);
+                pole[i] = rnd.Next(1, 51);
             }
             Console.WriteLine("Vygeneroval jsem 100 čísel s hodnotami od 1-50.\nNapiš, které číslo chceš hledat a já ti vypíšu kolik jich je.");
             hledat = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Počet výskytů čísla {hledat} je {PocetVyskytu(pole,hledat)}");
+            Console.WriteLine($"Počet výskytů čísla {hledat} je {PocetVyskytu(pole, hledat)}");
+        }
+
+        public static void Mainx_reseni() {
+            int[] pole = new int[100];
+            int c = 0, cislo = 0, n = 0;
+            Console.WriteLine("zadej cisla");
+            do {
+                int.TryParse(Console.ReadLine(), out cislo);
+                if (cislo != 0) pole[n++] = cislo;
+            }
+            while (cislo != 0);
+            Console.WriteLine("jake cislo chceš najit?");
+            int.TryParse(Console.ReadLine(), out c);
+            Console.WriteLine("zadane cislo {0} se zde vyskytuje celkem {1}x", c, najdi(pole, c, n));
+        }
+
+        private static int najdi(int[] poleF, int cF, int nF) {
+            int p = 0;
+            for (int i = 0; i < nF - 1; i++) {
+                if (poleF[i] == cF) p++;
+            }
+            return p;
         }
     }
 }

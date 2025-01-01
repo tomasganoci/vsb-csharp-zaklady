@@ -37,5 +37,28 @@ namespace F {
             zadaneHledani = Console.ReadLine();
             Console.WriteLine($"V text \"{zadanyText}\" jsem vyhledal \"{zadaneHledani}\" {Vyskyty(zadanyText, zadaneHledani)}x.");
         }
+
+        public static void Mainx_reseni(string[] args) {
+            Console.WriteLine("Zadej textovy retezec");
+            string text = Console.ReadLine();
+            Console.WriteLine("Zadej hledany znak");
+            string znak = Console.ReadLine();
+            Console.WriteLine("{0} se zde vyskutuje celkem {1}x", znak, vyskyty(text, znak).ToString());
+        }
+
+        private static int vyskyty(string ftext, string fznak) {
+            char[] c = ftext.ToCharArray();
+            string d = "";
+            int n = 0;
+
+            for (int i = 0; i < ftext.Length; i++) {
+                d = c[i].ToString();
+
+                if (d == fznak) {
+                    n++;
+                }
+            }
+            return n;
+        }
     }
 }
