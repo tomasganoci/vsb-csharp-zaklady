@@ -63,5 +63,18 @@ namespace F {
                 }
             }
         }
+        public static void Mainx_reseni(string[] args) {
+            Console.WriteLine("Zadej znak");
+            char vstup = (char)Console.Read();
+            Console.WriteLine(signum(vstup));
+        }
+        static string signum(char v) {
+            string vystup = "";
+            if (v >= 'a' && v <= 'z') vystup = "Jedna se o male pismeno.";
+            else if (v >= 'A' && v <= 'Z') vystup = "Jedna se o velke pismeno.";
+            else if (v >= '0' && v <= '9') vystup = "Jedna se o cislici.";
+            else vystup = "Jedna se o jiny znak.";
+            return vystup;
+        }
     }
 }

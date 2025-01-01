@@ -61,5 +61,37 @@ namespace F2 {
                 Console.WriteLine($"Osoba {i + 1} má {poleUroceni[i]:f}");
             }
         }
+
+        public static void Mainx_reseni(string[] args) {
+            double[] pole = new double[10];
+            double[] poleZF = new double[pole.Length];
+            double cislo = 0;
+            int n = 0;
+            Console.WriteLine("Zadej uspory nekolika osob, nulou zadávání ukončíš.");
+            do {
+                double.TryParse(Console.ReadLine(), out cislo);
+                if (cislo != 0) {
+                    pole[n] = cislo;
+                    n++;
+                }
+            } while (cislo != 0);
+            double u;
+            Console.WriteLine("Zadej urokovou sazbu.");
+            double.TryParse(Console.ReadLine(), out u);
+            poleZF = uroky(pole, u);
+            for (int i = 0; i < uroky(pole, u).Length; i++) {
+                if (poleZF[i] == 0) {
+                    continue;
+                }
+                else Console.WriteLine("{0:f2}\n", poleZF[i]);
+            }
+        }
+
+        private static double[] uroky(double[] polef, double urok) {
+            for (int i = 0; i < polef.Length - 1; i++) {
+                polef[i] = polef[i] + ((polef[i] / 100) * urok);
+            }
+            return polef;
+        }
     }
 }

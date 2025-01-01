@@ -45,5 +45,32 @@ namespace F2 {
             }
             else { Console.WriteLine($"Zadaná čísla nejsou vzestupná. Porušuje to prvek v řadě (index) {jeVzestupne} a číslo {naplneneCisla[jeVzestupne]}"); }
         }
+
+        public static void Mainx_reseni(string[] args) {
+            int[] pole = new int[100];
+            int cislo = 0, n = 0, por = 0;
+            Console.WriteLine("Zadej pole cisel,ukoncis nulou");
+            do {
+                int.TryParse(Console.ReadLine(), out cislo);
+                if (cislo != 0) pole[n++] = cislo;
+            }
+            while (cislo != 0);
+            por = porusuje(pole, n);
+            if (por != 0) Console.WriteLine("posloupnost cisel porusuje {0} znak", porusuje(pole, n));
+            else Console.WriteLine("posloupnost cisel neporusuje zadny znak");
+        }
+
+        private static int porusuje(int[] poleF, int n) {
+            int j = 0, por = 0;
+            do {
+                if (poleF[j] >= poleF[j + 1]) {
+                    por = j + 2;    //+2 kvuli tomu, ze pole zacina od 0 a +1 kvuli tomu, že to porusuje znak v poli j+1
+                    break;          //vyskoc z cyklu
+                }
+                j++;
+            }
+            while (j < n - 1);
+            return por;
+        }
     }
 }

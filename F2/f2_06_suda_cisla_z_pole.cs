@@ -54,5 +54,37 @@ namespace F2 {
                 Console.WriteLine(prvek);
             }
         }
+
+        public static void Mainx_reseni(string[] args) {
+            List<int> list = new List<int>();
+            //int[] pole = new int[100];
+            int cislo = 0, n = 0;
+            Console.WriteLine("Zadej číslo, nulou zadávání ukončíš");
+            do {
+                int.TryParse(Console.ReadLine(), out cislo);
+                if (cislo != 0) list.Add(cislo);
+                //pole[n++] = cislo;
+            }
+            while (cislo != 0);
+            Console.WriteLine();
+            List<int> zF = new List<int>();
+            //int[] zF = new int[n];
+            zF = polesudych(list);
+            for (int i = 0; i < zF.Count; i++)             //misto continue bych pouzil, zjisteni, kolik se tam nachazi nul a o tolik bych pak pole zmensil a vypsal, ale s continue to take jde.
+            {
+                if (zF[i] == 0) continue;
+                else Console.WriteLine("{0}", zF[i]);
+            }
+        }
+
+        private static List<int> polesudych(List<int> listF) {
+            List<int> sudepole = new List<int>();
+            int j = 0;
+            for (int i = 0; i < listF.Count; i++) {
+                if ((listF[i] % 2) == 0) sudepole.Add(listF[i]);
+            }
+
+            return sudepole;
+        }
     }
 }

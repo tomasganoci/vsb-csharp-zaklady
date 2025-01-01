@@ -50,5 +50,27 @@ namespace F2 {
                 Console.WriteLine($"Počet výskytů čísla {i + 1}: {vysledky[i]}x");
             }
         }
+
+        public static void Mainx_reseni(string[] args) {
+            Console.WriteLine("kolikrat mam hodit kostkou?");
+            int kolikrat = int.Parse(Console.ReadLine());
+            int[] zF = new int[7];
+            Console.WriteLine("Padla cisla:");
+            zF = padlo(kolikrat);                           //POZOR, vracim-li pole z funkce je potreba nejdrive naplnit pole, ktere jsem si vytvoril pro naplneni z funkce. ZF
+            for (int i = 1; i < 7; i++) {
+                Console.WriteLine("cislo {0} padlo celkem {1}x", i, zF[i]);
+            }
+        }
+
+        private static int[] padlo(int kolikratF) {
+            Random r = new Random();
+            int[] polepoctu = new int[7];
+            int hod = 0;
+            for (int i = 0; i <= kolikratF; i++) {
+                hod = r.Next(1, 7);
+                polepoctu[hod]++;
+            }
+            return polepoctu;
+        }
     }
 }

@@ -40,5 +40,64 @@ namespace F {
             zadanyRok = int.Parse(Console.ReadLine());
             Console.WriteLine($"Podle tvého zadání {zadanyDen}.{zadanyMesic}.{zadanyRok} má den pořadí {CisloDneVRoce(zadanyDen, zadanyMesic, zadanyRok)}");
         }
+
+        public static void Mainx_reseni(string[] args) {
+            int den, mesic, rok;
+            Console.WriteLine("Zadejte den, mesic a rok");
+            int.TryParse(Console.ReadLine(), out den);
+            int.TryParse(Console.ReadLine(), out mesic);
+            int.TryParse(Console.ReadLine(), out rok);
+            if (CisloDneS(den, mesic, rok) == 0.5) {
+                Console.WriteLine("Zadali jste spatne datum");
+            }
+            else {
+                Console.WriteLine("Pocet dnu od 31.12.1899 do {0}.{1}.{2} je {3}", den, mesic, rok, CisloDneS(den, mesic, rok));
+            }
+        }
+
+        private static double CisloDneS(int dn, int mes, int r) {
+            double cislo = 0;
+            DateTime datum0 = new DateTime(1899, 12, 31);
+            if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+                if (dn > 31) {
+                    cislo = 0.5;
+                }
+            }
+            else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+                if (dn > 30) {
+                    cislo = 0.5;
+                }
+            }
+            else if (mes == 2) {
+                if (r % 100 == 0) {
+                    if (r % 400 == 0) {
+                        if (dn > 29) {
+                            cislo = 0.5;
+                        }
+                    }
+                    else {
+                        if (dn > 28) {
+                            cislo = 0.5;
+                        }
+                    }
+                }
+                else {
+                    if (dn > 28) {
+                        cislo = 0.5;
+                    }
+                }
+            }
+            else {
+                cislo = 0.5;
+            }
+            if (cislo == 0) {
+                DateTime datum = new DateTime(r, mes, dn);
+                TimeSpan rozdil = datum - datum0;
+
+                cislo = (rozdil.TotalDays);
+            }
+
+            return cislo;
+        }
     }
 }

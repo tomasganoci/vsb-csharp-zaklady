@@ -46,5 +46,31 @@ namespace F {
             zadaneCisloMesice = int.Parse(Console.ReadLine());
             Console.WriteLine($"V {zadaneCisloMesice} měsící je {PocetDniMesice(zadaneCisloMesice)} dní.");
         }
+
+        public static void Mainx_reseni(string[] args) {
+            int mesic;
+            Console.WriteLine("Zadejte cislo mesice");
+            int.TryParse(Console.ReadLine(), out mesic);
+            Console.WriteLine("{0}. mesic ma {1} dni.", mesic, PocetDniMesice(mesic));
+        }
+
+        private static int PocetDniMesice(int cM) {
+            int v = 0;
+            switch (cM) {
+                case 1: v = 31; break;
+                case 2: v = 28; break;
+                case 3: v = 31; break;
+                case 4: v = 30; break;
+                case 5: v = 31; break;
+                case 6: v = 30; break;
+                case 7: v = 31; break;
+                case 8: v = 31; break;
+                case 9: v = 30; break;
+                case 10: v = 31; break;
+                case 11: v = 30; break;
+                case 12: v = 31; break;
+            }
+            return v;
+        }
     }
 }

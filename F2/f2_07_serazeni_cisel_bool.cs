@@ -30,7 +30,7 @@ namespace F2 {
             bool jeVzestupne = true;
             Console.WriteLine("Zadejte postupne cisla a já ti řeknu jestli jsou vzestupně");
             for (int i = 0; i < zadanaCisla.Length; i++) {
-                Console.WriteLine($"Zadejte číslo. Pořadí[{i+1}] [Ukončete \"0\"]");
+                Console.WriteLine($"Zadejte číslo. Pořadí[{i + 1}] [Ukončete \"0\"]");
                 zadaneCislo = int.Parse(Console.ReadLine());
                 if (zadaneCislo == 0) {
                     break;
@@ -42,6 +42,32 @@ namespace F2 {
             Array.Copy(zadanaCisla, naplneneCisla, pocetPruchodu);
             jeVzestupne = KontrolaVzestupu(naplneneCisla);
             Console.WriteLine($"Jsou zadaná čísla seřazená vzestupně: {jeVzestupne}");
+        }
+
+        public static void Mainx_reseni(string[] args) {
+            int[] pole = new int[100];
+            int cislo = 0, n = 0;
+            bool vzeF = false;
+            Console.WriteLine("zadej cisla max.100, ja zjistim, jestli si je zadal od nejmensiho po nejvetsi, nulou zadavani ukoncis.");
+            do {
+                int.TryParse(Console.ReadLine(), out cislo);
+                if (cislo != 0) pole[n++] = cislo;
+            }
+            while (cislo != 0);
+            vzeF = vzestupne(pole, n);
+            if (vzeF == true) Console.WriteLine("cisla byla zadana vzestupne");
+            else Console.WriteLine("cisla nebyla zadana vzestupne");
+        }
+
+        private static bool vzestupne(int[] poleF, int nF) {
+            bool vze = true;
+            int i = 0;
+            do {
+                if (poleF[i] >= poleF[i + 1]) vze = false;
+                i++;
+            }
+            while (nF - 1 > i);
+            return vze;
         }
     }
 }
