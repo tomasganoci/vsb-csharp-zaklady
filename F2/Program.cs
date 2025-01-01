@@ -13,6 +13,10 @@ namespace F2 {
             //f2_04_pocet_vyskytu.Mainx();
             //f2_05_pocet_padlych.Mainx();
             //f2_06_suda_cisla_z_pole.Mainx();
+            //f2_07_serazeni_cisel_bool.Mainx();
+            //f2_08_poruseni_serazeni.Mainx();
+            //f2_09_linearni_aritmeticka_posloupnost.Mainx();
+            f2_10_serazene_cisla.Mainx();
             //f2_11_sifrovani_znaku.Mainx();
             //f2_12_sifrovani_slov.Mainx();
         }
