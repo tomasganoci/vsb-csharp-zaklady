@@ -47,7 +47,11 @@ namespace F2 {
             Console.WriteLine($"Tvoří zadaná čísla tvoří lineární aritmetickou posloupnost: {jeVzestupne}");
         }
 
+<<<<<<< HEAD
         public static void Mainx_reseni() {
+=======
+        public static void Mainx_reseni(string[] args) {
+>>>>>>> 8d2d94dd594560968f74176f15bb21e4e7c2e422
             int[] pole = new int[1];
             int cislo = 0, n = 0;
             bool mF = false;

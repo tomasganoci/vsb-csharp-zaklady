@@ -51,7 +51,11 @@ namespace F2 {
             }
         }
 
+<<<<<<< HEAD
         public static void Mainx_reseni() {
+=======
+        public static void Mainx_reseni(string[] args) {
+>>>>>>> 8d2d94dd594560968f74176f15bb21e4e7c2e422
             Console.WriteLine("kolikrat mam hodit kostkou?");
             int kolikrat = int.Parse(Console.ReadLine());
             int[] zF = new int[7];

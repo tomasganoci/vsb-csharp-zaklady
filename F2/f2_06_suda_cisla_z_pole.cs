@@ -55,7 +55,11 @@ namespace F2 {
             }
         }
 
+<<<<<<< HEAD
         public static void Mainx_reseni() {
+=======
+        public static void Mainx_reseni(string[] args) {
+>>>>>>> 8d2d94dd594560968f74176f15bb21e4e7c2e422
             List<int> list = new List<int>();
             //int[] pole = new int[100];
             int cislo = 0, n = 0;
